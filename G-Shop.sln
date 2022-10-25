@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G-Shop", "G-Shop\G-Shop.csproj", "{5603FEED-B4FE-4C23-828A-2AF4CF4E6C5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G-Shop.Application", "G-Shop.Application\G-Shop.Application.csproj", "{FFA406BD-6060-421F-A420-36DC35201D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G-Shop.Database", "G-Shop.Database\G-Shop.Database.csproj", "{07ADB4B5-0B13-4DF6-8F7C-D3B14D01E381}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5603FEED-B4FE-4C23-828A-2AF4CF4E6C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5603FEED-B4FE-4C23-828A-2AF4CF4E6C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5603FEED-B4FE-4C23-828A-2AF4CF4E6C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5603FEED-B4FE-4C23-828A-2AF4CF4E6C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA406BD-6060-421F-A420-36DC35201D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA406BD-6060-421F-A420-36DC35201D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA406BD-6060-421F-A420-36DC35201D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA406BD-6060-421F-A420-36DC35201D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07ADB4B5-0B13-4DF6-8F7C-D3B14D01E381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07ADB4B5-0B13-4DF6-8F7C-D3B14D01E381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07ADB4B5-0B13-4DF6-8F7C-D3B14D01E381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07ADB4B5-0B13-4DF6-8F7C-D3B14D01E381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
