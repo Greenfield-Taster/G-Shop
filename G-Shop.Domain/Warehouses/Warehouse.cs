@@ -9,5 +9,5 @@ public class Warehouse
     int l;
     int xl;
     int xxl;
-    int xxl;
+    int xxxl;
 }
