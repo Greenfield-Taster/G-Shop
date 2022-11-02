@@ -11,4 +11,8 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\G-Shop.Domain\G-Shop.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

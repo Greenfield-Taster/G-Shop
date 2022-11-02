@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsPage));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Element1", 0);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Element 2", 1);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Element1", 0);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Element 2", 1);
             this.comboBoxBecom = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,11 +46,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonChek = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxAdd = new System.Windows.Forms.PictureBox();
             this.pictureBoxChange = new System.Windows.Forms.PictureBox();
             this.pictureBoxDelete = new System.Windows.Forms.PictureBox();
-            this.buttonChek = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -125,8 +125,8 @@
             // 
             this.listViewPoducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewPoducts.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem1,
+            listViewItem2});
             this.listViewPoducts.LargeImageList = this.imageList;
             this.listViewPoducts.Location = new System.Drawing.Point(3, 43);
             this.listViewPoducts.Name = "listViewPoducts";
@@ -139,8 +139,8 @@
             this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "images (1).jpg");
-            this.imageList.Images.SetKeyName(1, "images.jpg");
+            this.imageList.Images.SetKeyName(0, "key2");
+            this.imageList.Images.SetKeyName(1, "key1");
             // 
             // label3
             // 
@@ -204,6 +204,22 @@
             this.panel3.Size = new System.Drawing.Size(244, 526);
             this.panel3.TabIndex = 23;
             // 
+            // buttonChek
+            // 
+            this.buttonChek.FlatAppearance.BorderSize = 0;
+            this.buttonChek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChek.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonChek.ForeColor = System.Drawing.Color.Black;
+            this.buttonChek.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
+            this.buttonChek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChek.Location = new System.Drawing.Point(14, 436);
+            this.buttonChek.Name = "buttonChek";
+            this.buttonChek.Size = new System.Drawing.Size(216, 66);
+            this.buttonChek.TabIndex = 21;
+            this.buttonChek.Text = "         Добавить в заказ";
+            this.buttonChek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChek.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBoxAdd);
@@ -245,22 +261,6 @@
             this.pictureBoxDelete.TabIndex = 21;
             this.pictureBoxDelete.TabStop = false;
             // 
-            // buttonChek
-            // 
-            this.buttonChek.FlatAppearance.BorderSize = 0;
-            this.buttonChek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChek.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonChek.ForeColor = System.Drawing.Color.Black;
-            this.buttonChek.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
-            this.buttonChek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChek.Location = new System.Drawing.Point(14, 436);
-            this.buttonChek.Name = "buttonChek";
-            this.buttonChek.Size = new System.Drawing.Size(216, 66);
-            this.buttonChek.TabIndex = 21;
-            this.buttonChek.Text = "         Добавить в заказ";
-            this.buttonChek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChek.UseVisualStyleBackColor = true;
-            // 
             // ProductsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -268,6 +268,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ProductsPage";
             this.Size = new System.Drawing.Size(856, 572);
+            this.Load += new System.EventHandler(this.ProductsPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
