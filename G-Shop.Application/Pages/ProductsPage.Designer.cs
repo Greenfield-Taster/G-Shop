@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsPage));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Element1", 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Element 2", 1);
             this.comboBoxBecom = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -123,10 +121,6 @@
             // 
             // listViewPoducts
             // 
-            this.listViewPoducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewPoducts.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
             this.listViewPoducts.LargeImageList = this.imageList;
             this.listViewPoducts.Location = new System.Drawing.Point(3, 43);
             this.listViewPoducts.Name = "listViewPoducts";
@@ -137,10 +131,8 @@
             // imageList
             // 
             this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.ImageSize = new System.Drawing.Size(60, 60);
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "key2");
-            this.imageList.Images.SetKeyName(1, "key1");
             // 
             // label3
             // 
