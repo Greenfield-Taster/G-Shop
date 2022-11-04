@@ -1,4 +1,5 @@
-﻿using System;
+﻿using G_Shop.Application.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace G_Shop.Application
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void buttonProducts_Click(object sender, EventArgs e)
+        {
+            productsPage1.BringToFront();
+        }
+
+        private void buttonChek_Click(object sender, EventArgs e)
+        {
+            chekPage1.BringToFront();
         }
     }
 }

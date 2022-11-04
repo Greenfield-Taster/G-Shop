@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.productsPage1 = new G_Shop.Application.Pages.ProductsPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonProducts = new System.Windows.Forms.Button();
             this.buttonChek = new System.Windows.Forms.Button();
             this.buttonLogIn = new System.Windows.Forms.Button();
+            this.productsPage1 = new G_Shop.Application.Pages.ProductsPage();
+            this.chekPage1 = new G_Shop.Application.Pages.ChekPage();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // productsPage1
-            // 
-            this.productsPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
-            this.productsPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productsPage1.Location = new System.Drawing.Point(242, 0);
-            this.productsPage1.Name = "productsPage1";
-            this.productsPage1.Size = new System.Drawing.Size(900, 614);
-            this.productsPage1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -72,6 +64,7 @@
             this.buttonProducts.Text = "                Products";
             this.buttonProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonProducts.UseVisualStyleBackColor = true;
+            this.buttonProducts.Click += new System.EventHandler(this.buttonProducts_Click);
             // 
             // buttonChek
             // 
@@ -88,6 +81,7 @@
             this.buttonChek.Text = "                Chek";
             this.buttonChek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonChek.UseVisualStyleBackColor = true;
+            this.buttonChek.Click += new System.EventHandler(this.buttonChek_Click);
             // 
             // buttonLogIn
             // 
@@ -105,6 +99,23 @@
             this.buttonLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLogIn.UseVisualStyleBackColor = true;
             // 
+            // productsPage1
+            // 
+            this.productsPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
+            this.productsPage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productsPage1.Location = new System.Drawing.Point(242, 0);
+            this.productsPage1.Name = "productsPage1";
+            this.productsPage1.Size = new System.Drawing.Size(900, 614);
+            this.productsPage1.TabIndex = 0;
+            // 
+            // chekPage1
+            // 
+            this.chekPage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chekPage1.Location = new System.Drawing.Point(0, 0);
+            this.chekPage1.Name = "chekPage1";
+            this.chekPage1.Size = new System.Drawing.Size(1142, 614);
+            this.chekPage1.TabIndex = 2;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -112,6 +123,7 @@
             this.ClientSize = new System.Drawing.Size(1142, 614);
             this.Controls.Add(this.productsPage1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.chekPage1);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
@@ -121,11 +133,11 @@
         }
 
         #endregion
-
-        private Pages.ProductsPage productsPage1;
         private Panel panel1;
         private Button buttonProducts;
         private Button buttonChek;
         private Button buttonLogIn;
+        private Pages.ProductsPage productsPage1;
+        private Pages.ChekPage chekPage1;
     }
 }
