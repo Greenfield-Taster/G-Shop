@@ -32,7 +32,23 @@ public partial class ProductsPage : UserControl
             imageList.Images.Add(imageKey, image);
 
             ListViewItem listViewItem = new ListViewItem(product.Name, imageKey);
+            listViewItem.Tag = product.Id;
+
             listViewPoducts.Items.Add(listViewItem);
         }
+    }
+
+    private void ListViewPoducts_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (listViewPoducts.SelectedItems.Count == 0)
+        {
+            return;
+        }
+
+        ListViewItem listViewItem = listViewPoducts.SelectedItems[0];
+        int selectedProductId = Convert.ToInt32(listViewItem.Tag);
+
+        Product selectedProduct = _products.First(item => item.Id == selectedProductId);
+        productControl1.DisplayProductInfo(selectedProduct);
     }
 }

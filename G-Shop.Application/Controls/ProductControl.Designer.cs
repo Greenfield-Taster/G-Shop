@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -137,7 +137,7 @@
             this.tableLayoutPanel1.Controls.Add(this.sizesControl1, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelDescription1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelDescription2, 0, 5);
@@ -205,18 +205,18 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Україна";
             // 
-            // label5
+            // labelName
             // 
-            this.label5.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label5, 2);
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(3, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(294, 40);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Назва";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelName.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.labelName, 2);
+            this.labelName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelName.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.Location = new System.Drawing.Point(3, 200);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(294, 40);
+            this.labelName.TabIndex = 25;
+            this.labelName.Text = "Назва";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -267,7 +267,7 @@
         private Label label1;
         private Label label3;
         private Label label4;
-        private Label label5;
+        private Label labelName;
         private Label label6;
         private Label label7;
         private Label label8;

@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using G_Shop.Domain.Products;
 
-namespace G_Shop.Application.Controls
+namespace G_Shop.Application.Controls;
+
+public partial class ProductControl : UserControl
 {
-    public partial class ProductControl : UserControl
+    public ProductControl()
     {
-        public ProductControl()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
+
+    internal void DisplayProductInfo(Product selectedProduct)
+    {
+        labelName.Text = selectedProduct.Name;
     }
 }

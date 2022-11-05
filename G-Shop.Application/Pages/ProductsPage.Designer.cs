@@ -78,6 +78,7 @@
             this.listViewPoducts.Size = new System.Drawing.Size(550, 526);
             this.listViewPoducts.TabIndex = 18;
             this.listViewPoducts.UseCompatibleStateImageBehavior = false;
+            this.listViewPoducts.SelectedIndexChanged += new System.EventHandler(this.ListViewPoducts_SelectedIndexChanged);
             // 
             // imageList
             // 
