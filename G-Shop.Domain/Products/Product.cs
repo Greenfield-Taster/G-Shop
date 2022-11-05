@@ -4,24 +4,31 @@ namespace G_Shop.Domain.Products;
 
 public class Product
 {
-    private int id;
-    private string name;
-    private string country;
-    private string category;
-    private decimal price;
-    private byte[] imageBytes;
-
-    public Product(int id, string name, string country, string category, decimal price, byte[] imageBytes)
+    public Product(int id, string name, string country, Category category, decimal price, byte[] imageBytes, string description, Season season)
     {
-        this.id = id;
-        this.name = name;
-        this.country = country;
-        this.category = category;
-        this.price = price;
-        this.imageBytes = imageBytes;
+        Id = id;
+        Name = name;
+        Country = country;
+        Category = category;
+        Price = price;
+        ImageBytes = imageBytes;
+        Description = description;
+        Season = season;
     }
 
-    public string Name => name;
-    public byte[] ImageBytes => imageBytes;
-    public int Id => id;
+    public int Id { get; private set; }
+
+    public string Name { get; private set; }
+    
+    public string Country { get; private set; }
+    
+    public Category Category { get; private set; }
+    
+    public decimal Price { get; private set;}
+    
+    public byte[] ImageBytes { get; private set; }
+    
+    public string Description { get; private set; }
+
+    public Season Season { get; private set; }
 }
