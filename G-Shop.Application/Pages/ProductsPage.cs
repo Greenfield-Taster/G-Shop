@@ -20,6 +20,17 @@ public partial class ProductsPage : UserControl
         _products.AddRange(databaseProducts);
 
         DisplayProducts();
+        SetSelectedProduct();
+    }
+
+    private void SetSelectedProduct()
+    {
+        if (listViewPoducts.Items.Count == 0)
+        {
+            return;
+        }
+
+        listViewPoducts.Items[0].Selected = true;
     }
 
     private void DisplayProducts()

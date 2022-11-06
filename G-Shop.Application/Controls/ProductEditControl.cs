@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace G_Shop.Application.Controls
 {
-    public partial class ProductExitControl : UserControl
+    public partial class ProductEditControl : UserControl
     {
-        public ProductExitControl()
+        public ProductEditControl()
         {
             InitializeComponent();
         }
