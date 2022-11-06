@@ -2,6 +2,8 @@ namespace G_Shop.Application;
 
 internal static class Program
 {
+    internal static FormMain MainForm = new();
+
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
@@ -11,6 +13,6 @@ internal static class Program
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
-        System.Windows.Forms.Application.Run(new FormMain());
+        System.Windows.Forms.Application.Run(MainForm);
     }
 }

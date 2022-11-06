@@ -1,21 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
+﻿using G_Shop.Database.Repositories;
 
-namespace G_Shop.Application.Pages
+namespace G_Shop.Application.Pages;
+
+public partial class UserPage : UserControl
 {
-    public partial class UserPage : UserControl
+    private readonly UsersRepository _usersRepository = new();
+
+    public UserPage()
     {
-        public UserPage()
+        InitializeComponent();
+    }
+
+    private void ButtonLogin_Click(object sender, EventArgs e)
+    {
+        bool userExists = _usersRepository.CheckLoginAndPassword(textBoxLogin.Text, textBoxPassword.Text);
+
+        if (userExists == false) 
         {
-            InitializeComponent();
+            MessageBox.Show("Такого акаунту не існує.");
+            return;
         }
+
+        Program.MainForm.UserLogedIn();
     }
 }

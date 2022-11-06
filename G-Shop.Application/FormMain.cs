@@ -1,31 +1,37 @@
-﻿using G_Shop.Application.Pages;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace G_Shop.Application;
 
-namespace G_Shop.Application
+public partial class FormMain : Form
 {
-    public partial class FormMain : Form
+    private bool userAuthorised = false; 
+
+    public FormMain()
     {
-        public FormMain()
+        InitializeComponent();
+    }
+
+    private void buttonProducts_Click(object sender, EventArgs e)
+    {
+        if (userAuthorised == false)
         {
-            InitializeComponent();
+            return;
         }
 
-        private void buttonProducts_Click(object sender, EventArgs e)
+        productsPage1.BringToFront();
+    }
+
+    private void buttonChek_Click(object sender, EventArgs e)
+    {
+        if (userAuthorised == false)
         {
-            productsPage1.BringToFront();
+            return;
         }
 
-        private void buttonChek_Click(object sender, EventArgs e)
-        {
-            chekPage1.BringToFront();
-        }
+        chekPage1.BringToFront();
+    }
+
+    internal void UserLogedIn()
+    {
+        userAuthorised = true;
+
     }
 }
