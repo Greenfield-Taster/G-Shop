@@ -59,7 +59,7 @@ public partial class ProductsPage : UserControl
         ListViewItem listViewItem = listViewPoducts.SelectedItems[0];
         int selectedProductId = Convert.ToInt32(listViewItem.Tag);
 
-        Product selectedProduct = _products.First(item => item.Id == selectedProductId);
-        productControl1.DisplayProductInfo(selectedProduct);
+        Product selectedProduct = _products.First(item => item.Id == selectedProductId); // Поиск товара по Id
+        productControl1.DisplayProductInfo(selectedProduct); 
     }
 }

@@ -18,5 +18,11 @@ public partial class ProductControl : UserControl
         labelPrice.Text = selectedProduct.Price.ToString();
         labelSeason.Text = selectedProduct.Season.ToString();
         labelDescription.Text = selectedProduct.Description;
+        sizesControl1.DisplaySizes(selectedProduct.Id, UpdateSizesCount);
+    }
+
+    private void UpdateSizesCount(int count)
+    {
+        labelCount.Text = count.ToString();
     }
 }
