@@ -25,7 +25,8 @@ public class ProductsRepository
         {
             if (changedProduct.Id == dataBaseProducts[index].Id)
             {
-                dataBaseProducts[index] = changedProduct;
+                dataBaseProducts.RemoveAt(index);
+                dataBaseProducts.Insert(index, changedProduct);
                 return;
             }   
         }

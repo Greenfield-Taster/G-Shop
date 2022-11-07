@@ -6,7 +6,8 @@ namespace G_Shop.Application.Controls;
 
 public partial class ProductEditControl : UserControl
 {
-    private readonly ProductsRepository _productsRepository = new();
+    private readonly ProductsRepository _productsRepository = RepositoryProvider.ProductsRepository;
+    private Action? productChangedCallback = null;
     private int productId;
 
     public ProductEditControl()
@@ -17,8 +18,9 @@ public partial class ProductEditControl : UserControl
         comboBoxSeason.Items.AddRange(Enum.GetNames<Season>());
     }
 
-    internal void DisplayEditProductInfo(Product selectedProduct)
+    internal void DisplayEditProductInfo(Product selectedProduct, Action? onProductChangedCallback)
     {
+        productChangedCallback = onProductChangedCallback;
         textBoxName.Text = selectedProduct.Name;
         comboBoxCategory.SelectedIndex = (int)selectedProduct.Category;
         textBoxPrice.Text = selectedProduct.Price.ToString();
@@ -52,6 +54,8 @@ public partial class ProductEditControl : UserControl
             (Season)comboBoxSeason.SelectedIndex);
 
         _productsRepository.UpdateProduct(product);
-        this.SendToBack();    
+
+        productChangedCallback?.Invoke();
+        this.SendToBack(); 
     }
 }

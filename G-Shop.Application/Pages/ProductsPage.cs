@@ -8,7 +8,7 @@ namespace G_Shop.Application.Pages;
 public partial class ProductsPage : UserControl
 {
     private readonly List<Product> _products = new(); // Список всех товаров из базы
-    private readonly ProductsRepository _productsRepository = new(); // Предоставляет доступ к базе данных
+    private readonly ProductsRepository _productsRepository = RepositoryProvider.ProductsRepository; // Предоставляет доступ к базе данных
 
     public ProductsPage()
     {
@@ -17,11 +17,7 @@ public partial class ProductsPage : UserControl
 
     private void ProductsPage_Load(object sender, EventArgs e)
     {
-        List<Product> databaseProducts = _productsRepository.GetProducts();
-        _products.AddRange(databaseProducts);
-
-        DisplayProducts();
-        SetSelectedProduct();
+        ReloadProducts();
     }
 
     private void SetSelectedProduct()
@@ -36,6 +32,9 @@ public partial class ProductsPage : UserControl
 
     private void DisplayProducts()
     {
+        listViewPoducts.Clear();
+        imageList.Images.Clear();
+
         foreach (Product product in _products)
         {
             Image image = DatabaseImageConverter.ByteArrayToImage(product.ImageBytes);
@@ -87,6 +86,17 @@ public partial class ProductsPage : UserControl
             return;
         }
 
-        productEditControl1.DisplayEditProductInfo(selectedProduct);
+        productEditControl1.DisplayEditProductInfo(selectedProduct, ReloadProducts);
+    }
+
+    private void ReloadProducts()
+    {
+        _products.Clear();
+
+        List<Product> databaseProducts = _productsRepository.GetProducts();
+        _products.AddRange(databaseProducts);
+
+        DisplayProducts();
+        SetSelectedProduct();
     }
 }

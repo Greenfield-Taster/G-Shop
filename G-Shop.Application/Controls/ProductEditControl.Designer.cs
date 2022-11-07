@@ -202,7 +202,7 @@
             this.buttonCancel.Text = "   Змінити товар";
             this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
             // buttonEdit
             // 
@@ -220,7 +220,7 @@
             this.buttonEdit.Text = "         Відмінити";
             this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
+            this.buttonEdit.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // textBoxCountry
             // 
