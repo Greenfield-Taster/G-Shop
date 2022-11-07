@@ -18,4 +18,16 @@ public class ProductsRepository
     {
         return dataBaseProducts;
     }
+
+    public void UpdateProduct(Product changedProduct)
+    {
+        for (int index = 0; index < dataBaseProducts.Count; index++)
+        {
+            if (changedProduct.Id == dataBaseProducts[index].Id)
+            {
+                dataBaseProducts[index] = changedProduct;
+                return;
+            }   
+        }
+    }
 }

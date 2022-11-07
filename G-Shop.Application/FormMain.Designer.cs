@@ -34,7 +34,6 @@
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.productsPage1 = new G_Shop.Application.Pages.ProductsPage();
             this.chekPage1 = new G_Shop.Application.Pages.ChekPage();
-            this.userPage1 = new G_Shop.Application.Pages.UserPage();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,21 +116,11 @@
             this.chekPage1.Size = new System.Drawing.Size(1142, 614);
             this.chekPage1.TabIndex = 2;
             // 
-            // userPage1
-            // 
-            this.userPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(189)))), ((int)(((byte)(125)))));
-            this.userPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userPage1.Location = new System.Drawing.Point(242, 0);
-            this.userPage1.Name = "userPage1";
-            this.userPage1.Size = new System.Drawing.Size(900, 614);
-            this.userPage1.TabIndex = 3;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 614);
-            this.Controls.Add(this.userPage1);
             this.Controls.Add(this.productsPage1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chekPage1);
@@ -150,6 +139,5 @@
         private Button buttonLogIn;
         private Pages.ProductsPage productsPage1;
         private Pages.ChekPage chekPage1;
-        private Pages.UserPage userPage1;
     }
 }

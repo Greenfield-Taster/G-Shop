@@ -1,6 +1,7 @@
 ﻿using G_Shop.Application.Helpers;
 using G_Shop.Database.Repositories;
 using G_Shop.Domain.Products;
+using System.Windows.Forms;
 
 namespace G_Shop.Application.Pages;
 
@@ -49,17 +50,43 @@ public partial class ProductsPage : UserControl
         }
     }
 
-    private void ListViewPoducts_SelectedIndexChanged(object sender, EventArgs e)
+    private Product? GetSelectedProduct()
     {
         if (listViewPoducts.SelectedItems.Count == 0)
         {
-            return;
+            return null;
         }
 
         ListViewItem listViewItem = listViewPoducts.SelectedItems[0];
         int selectedProductId = Convert.ToInt32(listViewItem.Tag);
 
         Product selectedProduct = _products.First(item => item.Id == selectedProductId); // Поиск товара по Id
+        return selectedProduct;
+    }
+
+    private void ListViewPoducts_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Product? selectedProduct = GetSelectedProduct();
+
+        if (selectedProduct is null)
+        {
+            return;
+        }
+
         productControl1.DisplayProductInfo(selectedProduct); 
+    }
+
+    private void PictureBoxChange_Click(object sender, EventArgs e)
+    {
+        productEditControl1.BringToFront();
+
+        Product? selectedProduct = GetSelectedProduct();
+
+        if (selectedProduct is null)
+        {
+            return;
+        }
+
+        productEditControl1.DisplayEditProductInfo(selectedProduct);
     }
 }

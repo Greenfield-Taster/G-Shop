@@ -44,6 +44,7 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelMyCountry = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
+            this.buttonChek = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.labelMyCount.AutoSize = true;
             this.labelMyCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCount.Location = new System.Drawing.Point(3, 555);
+            this.labelMyCount.Location = new System.Drawing.Point(3, 489);
             this.labelMyCount.Name = "labelMyCount";
             this.labelMyCount.Size = new System.Drawing.Size(144, 30);
             this.labelMyCount.TabIndex = 17;
@@ -109,7 +110,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.sizesControl1, 2);
             this.sizesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sizesControl1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sizesControl1.Location = new System.Drawing.Point(3, 513);
+            this.sizesControl1.Location = new System.Drawing.Point(3, 447);
             this.sizesControl1.Name = "sizesControl1";
             this.sizesControl1.Size = new System.Drawing.Size(294, 39);
             this.sizesControl1.TabIndex = 19;
@@ -119,7 +120,7 @@
             this.labelCount.AutoSize = true;
             this.labelCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCount.Location = new System.Drawing.Point(153, 555);
+            this.labelCount.Location = new System.Drawing.Point(153, 489);
             this.labelCount.Name = "labelCount";
             this.labelCount.Size = new System.Drawing.Size(144, 30);
             this.labelCount.TabIndex = 20;
@@ -130,6 +131,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.buttonChek, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.labelDescription, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelMyCount, 0, 8);
@@ -147,7 +149,7 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
+            this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -157,6 +159,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 585);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
@@ -168,7 +171,7 @@
             this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelDescription.Location = new System.Drawing.Point(3, 340);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(294, 170);
+            this.labelDescription.Size = new System.Drawing.Size(294, 104);
             this.labelDescription.TabIndex = 28;
             this.labelDescription.Text = "Опис";
             // 
@@ -240,6 +243,24 @@
             this.labelCategory.TabIndex = 22;
             this.labelCategory.Text = "Man/woman";
             // 
+            // buttonChek
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.buttonChek, 2);
+            this.buttonChek.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonChek.FlatAppearance.BorderSize = 0;
+            this.buttonChek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChek.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonChek.ForeColor = System.Drawing.Color.Black;
+            this.buttonChek.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
+            this.buttonChek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChek.Location = new System.Drawing.Point(3, 522);
+            this.buttonChek.Name = "buttonChek";
+            this.buttonChek.Size = new System.Drawing.Size(294, 60);
+            this.buttonChek.TabIndex = 29;
+            this.buttonChek.Text = "         Добавить в заказ";
+            this.buttonChek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChek.UseVisualStyleBackColor = true;
+            // 
             // ProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -271,5 +292,6 @@
         private Label labelMyCountry;
         private Label labelCountry;
         private Label labelDescription;
+        private Button buttonChek;
     }
 }

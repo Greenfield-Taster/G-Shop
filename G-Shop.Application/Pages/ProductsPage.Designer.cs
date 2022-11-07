@@ -37,11 +37,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.productControl1 = new G_Shop.Application.Controls.ProductControl();
-            this.buttonChek = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxAdd = new System.Windows.Forms.PictureBox();
             this.pictureBoxChange = new System.Windows.Forms.PictureBox();
             this.pictureBoxDelete = new System.Windows.Forms.PictureBox();
+            this.productEditControl1 = new G_Shop.Application.Controls.ProductEditControl();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,7 +117,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.productControl1);
-            this.panel3.Controls.Add(this.buttonChek);
+            this.panel3.Controls.Add(this.productEditControl1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(559, 43);
             this.panel3.Name = "panel3";
@@ -129,25 +129,8 @@
             this.productControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productControl1.Location = new System.Drawing.Point(0, 0);
             this.productControl1.Name = "productControl1";
-            this.productControl1.Size = new System.Drawing.Size(294, 460);
+            this.productControl1.Size = new System.Drawing.Size(294, 526);
             this.productControl1.TabIndex = 22;
-            // 
-            // buttonChek
-            // 
-            this.buttonChek.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonChek.FlatAppearance.BorderSize = 0;
-            this.buttonChek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChek.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonChek.ForeColor = System.Drawing.Color.Black;
-            this.buttonChek.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
-            this.buttonChek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChek.Location = new System.Drawing.Point(0, 460);
-            this.buttonChek.Name = "buttonChek";
-            this.buttonChek.Size = new System.Drawing.Size(294, 66);
-            this.buttonChek.TabIndex = 21;
-            this.buttonChek.Text = "         Добавить в заказ";
-            this.buttonChek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChek.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -179,6 +162,7 @@
             this.pictureBoxChange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxChange.TabIndex = 22;
             this.pictureBoxChange.TabStop = false;
+            this.pictureBoxChange.Click += new System.EventHandler(this.PictureBoxChange_Click);
             // 
             // pictureBoxDelete
             // 
@@ -189,6 +173,14 @@
             this.pictureBoxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDelete.TabIndex = 21;
             this.pictureBoxDelete.TabStop = false;
+            // 
+            // productEditControl1
+            // 
+            this.productEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productEditControl1.Location = new System.Drawing.Point(0, 0);
+            this.productEditControl1.Name = "productEditControl1";
+            this.productEditControl1.Size = new System.Drawing.Size(294, 526);
+            this.productEditControl1.TabIndex = 23;
             // 
             // ProductsPage
             // 
@@ -223,7 +215,7 @@
         private PictureBox pictureBoxDelete;
         private PictureBox pictureBoxAdd;
         private PictureBox pictureBoxChange;
-        private Button buttonChek;
         private Controls.ProductControl productControl1;
+        private Controls.ProductEditControl productEditControl1;
     }
 }
