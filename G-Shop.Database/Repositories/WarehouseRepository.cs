@@ -18,4 +18,17 @@ public class WarehouseRepository
         Warehouse foundWarehouse = dataBaseWarehouse.First(warehouse => warehouse.ProductId == productId); // Поиск склада по Id продукта
         return foundWarehouse;
     }
+
+    public void UpdateWarehouse(Warehouse changedWarehouse)
+    {
+        for (int index = 0; index < dataBaseWarehouse.Count; index++)
+        {
+            if (changedWarehouse.ProductId == dataBaseWarehouse[index].ProductId)
+            {
+                dataBaseWarehouse.RemoveAt(index);
+                dataBaseWarehouse.Insert(index, changedWarehouse);
+                return;
+            }
+        }
+    }
 }

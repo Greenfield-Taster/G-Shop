@@ -18,6 +18,7 @@ public partial class ProductEditControl : UserControl
         comboBoxSeason.Items.AddRange(Enum.GetNames<Season>());
     }
 
+    // Выводит информацию о продукте
     internal void DisplayEditProductInfo(Product selectedProduct, Action? onProductChangedCallback)
     {
         productChangedCallback = onProductChangedCallback;
@@ -33,7 +34,7 @@ public partial class ProductEditControl : UserControl
 
     private void UpdateSizesCount(int count)
     {
-        textBoxCount.Text = count.ToString();
+        numericUpDownCount.Text = count.ToString();
     }
 
     private void ButtonCancel_Click(object sender, EventArgs e)
@@ -54,8 +55,15 @@ public partial class ProductEditControl : UserControl
             (Season)comboBoxSeason.SelectedIndex);
 
         _productsRepository.UpdateProduct(product);
+        sizesControl1.SaveChangedToDatabase();
 
         productChangedCallback?.Invoke();
         this.SendToBack(); 
+    }
+
+    private void NumericUpDownCount_ValueChanged(object sender, EventArgs e)
+    {
+        int count = Convert.ToInt32(numericUpDownCount.Value);
+        sizesControl1.SetCountForSelectedSize(count);
     }
 }

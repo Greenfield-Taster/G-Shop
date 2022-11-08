@@ -5,13 +5,58 @@ namespace G_Shop.Application.Controls;
 
 public partial class SizesControl : UserControl
 {
-    private readonly WarehouseRepository _warehouseRepository = new ();
+    private readonly WarehouseRepository _warehouseRepository = RepositoryProvider.WarehouseRepository;
     private Warehouse _warehouse = new (0,0,0,0,0,0,0,0); // Склад = один товар
     private Action<int>? showSizesCountCallback = null;
 
     public SizesControl()
     {
         InitializeComponent();
+    }
+
+    internal void SetCountForSelectedSize(int count)
+    {
+        if (radioButtonS.Checked)
+        {
+            _warehouse.S = count;
+            return;
+        }
+        
+        if (radioButtonL.Checked)
+        {
+            _warehouse.L = count;
+            return;
+        }
+        
+        if (radioButtonXL.Checked)
+        {
+            _warehouse.Xl = count;
+            return;
+        }
+        
+        if (radioButtonM.Checked)
+        {
+            _warehouse.M = count;
+            return;
+        }
+        
+        if (radioButtonXS.Checked)
+        {
+            _warehouse.Xs = count;
+            return;
+        }
+        
+        if (radioButtonXXL.Checked)
+        {
+            _warehouse.Xxl = count;
+            return;
+        }
+
+        if (radioButtonXXXL.Checked)
+        {
+            _warehouse.Xxxl = count;
+            return;
+        }
     }
 
     internal void DisplaySizes(int productId, Action<int> showSizesCount)
@@ -61,5 +106,10 @@ public partial class SizesControl : UserControl
     private void RadioButtonXXXL_CheckedChanged(object sender, EventArgs e)
     {
         showSizesCountCallback?.Invoke(_warehouse.Xxxl);
+    }
+
+    internal void SaveChangedToDatabase()
+    {
+        _warehouseRepository.UpdateWarehouse(_warehouse);
     }
 }
