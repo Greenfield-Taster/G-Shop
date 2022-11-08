@@ -31,4 +31,16 @@ public class WarehouseRepository
             }
         }
     }
+
+    public void RemoveWarehouse(int productId)
+    {
+        Warehouse foundWarehouse = GetWarehouseByProductId(productId);
+
+        if (foundWarehouse is null)
+        {
+            return;
+        }
+
+        dataBaseWarehouse.Remove(foundWarehouse);
+    }
 }

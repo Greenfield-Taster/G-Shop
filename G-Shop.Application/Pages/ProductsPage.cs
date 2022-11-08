@@ -99,4 +99,17 @@ public partial class ProductsPage : UserControl
         DisplayProducts();
         SetSelectedProduct();
     }
+
+    private void PictureBoxDelete_Click(object sender, EventArgs e)
+    {
+        Product? product = GetSelectedProduct();
+
+        if (product is null) 
+        {
+            return;
+        }
+
+        _productsRepository.DeleteProduct(product.Id);
+        ReloadProducts();
+    }
 }

@@ -37,11 +37,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.productControl1 = new G_Shop.Application.Controls.ProductControl();
+            this.productEditControl1 = new G_Shop.Application.Controls.ProductEditControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxAdd = new System.Windows.Forms.PictureBox();
             this.pictureBoxChange = new System.Windows.Forms.PictureBox();
             this.pictureBoxDelete = new System.Windows.Forms.PictureBox();
-            this.productEditControl1 = new G_Shop.Application.Controls.ProductEditControl();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -132,6 +132,14 @@
             this.productControl1.Size = new System.Drawing.Size(294, 526);
             this.productControl1.TabIndex = 22;
             // 
+            // productEditControl1
+            // 
+            this.productEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productEditControl1.Location = new System.Drawing.Point(0, 0);
+            this.productEditControl1.Name = "productEditControl1";
+            this.productEditControl1.Size = new System.Drawing.Size(294, 526);
+            this.productEditControl1.TabIndex = 23;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBoxAdd);
@@ -173,14 +181,7 @@
             this.pictureBoxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDelete.TabIndex = 21;
             this.pictureBoxDelete.TabStop = false;
-            // 
-            // productEditControl1
-            // 
-            this.productEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productEditControl1.Location = new System.Drawing.Point(0, 0);
-            this.productEditControl1.Name = "productEditControl1";
-            this.productEditControl1.Size = new System.Drawing.Size(294, 526);
-            this.productEditControl1.TabIndex = 23;
+            this.pictureBoxDelete.Click += new System.EventHandler(this.PictureBoxDelete_Click);
             // 
             // ProductsPage
             // 

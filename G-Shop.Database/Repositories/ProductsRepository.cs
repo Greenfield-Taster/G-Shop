@@ -1,5 +1,6 @@
 ﻿using G_Shop.Database.Properties;
 using G_Shop.Domain.Products;
+using G_Shop.Domain.Warehouses;
 
 namespace G_Shop.Database.Repositories;
 
@@ -13,6 +14,20 @@ public class ProductsRepository
         new Product(4,"Чорна куртка", "Украина", Category.Woman, 1400, Resources.jacket, "ісумум умлп м кди мкдуи лакд иавьаи ва и", Season.Summer),
         new Product(5,"Бежева безрукавка", "Украина", Category.Woman, 15000, Resources.jacket2, "цуацу3 умлп м кди мкдуи лакд иавьаи ва и", Season.Autumn),
     };
+
+    public void DeleteProduct(int id)
+    {
+        for (int i = 0; i < dataBaseProducts.Count; i++)
+        {
+            if (dataBaseProducts[i].Id == id)
+            {
+                dataBaseProducts.RemoveAt(i);
+                WarehouseRepository warehouseRepository = RepositoryProvider.WarehouseRepository;
+                warehouseRepository.RemoveWarehouse(id);
+                return;
+            }
+        }
+    }
 
     public List<Product> GetProducts()
     {
