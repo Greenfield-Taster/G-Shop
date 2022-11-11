@@ -77,4 +77,21 @@ public partial class ProductEditControl : UserControl
         int count = Convert.ToInt32(numericUpDownCount.Value);
         sizesControl1.SetCountForSelectedSize(count);
     }
+
+    private void pictureBox1_Click(object sender, EventArgs e)
+    {
+        OpenFileDialog openFileDialog = new();
+
+        if (openFileDialog.ShowDialog() == DialogResult.OK)
+        {
+            try
+            {
+                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
 }
