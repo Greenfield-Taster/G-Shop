@@ -7,7 +7,7 @@ namespace G_Shop.Application.Controls;
 public partial class ProductEditControl : UserControl
 {
     private readonly ProductsRepository _productsRepository = RepositoryProvider.ProductsRepository;
-    private Action? productChangedCallback = null;
+    private Action? productChangedCallback = null; // Хранит в себе какой-то метод из главной формы (Перезагрузить товары)
     private int productId;
 
     public ProductEditControl()
@@ -17,6 +17,8 @@ public partial class ProductEditControl : UserControl
         comboBoxCategory.Items.AddRange(Enum.GetNames<Category>());
         comboBoxSeason.Items.AddRange(Enum.GetNames<Season>());
     }
+
+    public ProductControlMode Mode { get; set; } = ProductControlMode.Edit;
 
     // Выводит информацию о продукте
     internal void DisplayEditProductInfo(Product selectedProduct, Action? onProductChangedCallback)
@@ -54,8 +56,17 @@ public partial class ProductEditControl : UserControl
             richTextBoxDescription.Text, 
             (Season)comboBoxSeason.SelectedIndex);
 
-        _productsRepository.UpdateProduct(product);
-        sizesControl1.SaveChangedToDatabase();
+        if (Mode == ProductControlMode.Edit)
+        {
+            _productsRepository.UpdateProduct(product);
+            sizesControl1.SaveChangedToDatabase();
+        }
+        else if (Mode == ProductControlMode.Add)
+        {
+            int addedProductId= _productsRepository.AddNewProduct(product);
+            sizesControl1.AddNewWarehouseToDatabase(addedProductId);
+        }
+
 
         productChangedCallback?.Invoke();
         this.SendToBack(); 

@@ -1,4 +1,6 @@
-﻿using G_Shop.Application.Helpers;
+﻿using G_Shop.Application.Controls;
+using G_Shop.Application.Helpers;
+using G_Shop.Application.Properties;
 using G_Shop.Database.Repositories;
 using G_Shop.Domain.Products;
 using System.Windows.Forms;
@@ -87,6 +89,7 @@ public partial class ProductsPage : UserControl
         }
 
         productEditControl1.DisplayEditProductInfo(selectedProduct, ReloadProducts);
+        productEditControl1.Mode = ProductControlMode.Edit;
     }
 
     private void ReloadProducts()
@@ -111,5 +114,14 @@ public partial class ProductsPage : UserControl
 
         _productsRepository.DeleteProduct(product.Id);
         ReloadProducts();
+    }
+
+    private void PictureBoxAdd_Click(object sender, EventArgs e)
+    {
+        Product emptyProduct = new(0,"","", Category.Man, 0, DatabaseImageConverter.ImageToByteArray(Resources.empty_profile), "",Season.Autumn);
+
+        productEditControl1.BringToFront();
+        productEditControl1.DisplayEditProductInfo(emptyProduct, ReloadProducts);
+        productEditControl1.Mode = ProductControlMode.Add;
     }
 }

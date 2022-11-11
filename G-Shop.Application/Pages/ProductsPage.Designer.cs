@@ -160,6 +160,7 @@
             this.pictureBoxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAdd.TabIndex = 23;
             this.pictureBoxAdd.TabStop = false;
+            this.pictureBoxAdd.Click += new System.EventHandler(this.PictureBoxAdd_Click);
             // 
             // pictureBoxChange
             // 

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductEditControl));
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
-            this.sizesControl1 = new G_Shop.Application.Controls.SizesControl();
             this.labelMyCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSeason = new System.Windows.Forms.ComboBox();
@@ -47,6 +46,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.numericUpDownCount = new System.Windows.Forms.NumericUpDown();
+            this.sizesControl1 = new G_Shop.Application.Controls.SizesControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).BeginInit();
@@ -71,16 +71,6 @@
             this.richTextBoxDescription.Size = new System.Drawing.Size(294, 78);
             this.richTextBoxDescription.TabIndex = 43;
             this.richTextBoxDescription.Text = "";
-            // 
-            // sizesControl1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.sizesControl1, 2);
-            this.sizesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sizesControl1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sizesControl1.Location = new System.Drawing.Point(3, 452);
-            this.sizesControl1.Name = "sizesControl1";
-            this.sizesControl1.Size = new System.Drawing.Size(294, 39);
-            this.sizesControl1.TabIndex = 21;
             // 
             // labelMyCount
             // 
@@ -210,8 +200,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(144, 60);
             this.buttonEdit.TabIndex = 44;
-            this.buttonEdit.Text = "         Відмінити";
-            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEdit.Text = "Відмінити";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
@@ -228,8 +217,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(144, 60);
             this.buttonCancel.TabIndex = 45;
-            this.buttonCancel.Text = "   Змінити товар";
-            this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancel.Text = "Готово";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
@@ -251,10 +239,10 @@
             this.tableLayoutPanel1.Controls.Add(this.comboBoxSeason, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.labelMyCount, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.sizesControl1, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxDescription, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDownCount, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.sizesControl1, 0, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -286,6 +274,15 @@
             this.numericUpDownCount.Size = new System.Drawing.Size(144, 23);
             this.numericUpDownCount.TabIndex = 47;
             this.numericUpDownCount.ValueChanged += new System.EventHandler(this.NumericUpDownCount_ValueChanged);
+            // 
+            // sizesControl1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.sizesControl1, 2);
+            this.sizesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sizesControl1.Location = new System.Drawing.Point(3, 452);
+            this.sizesControl1.Name = "sizesControl1";
+            this.sizesControl1.Size = new System.Drawing.Size(294, 39);
+            this.sizesControl1.TabIndex = 48;
             // 
             // ProductEditControl
             // 
@@ -319,8 +316,8 @@
         private ComboBox comboBoxSeason;
         private Label label1;
         private Label labelMyCount;
-        private SizesControl sizesControl1;
         private RichTextBox richTextBoxDescription;
         private NumericUpDown numericUpDownCount;
+        private SizesControl sizesControl1;
     }
 }

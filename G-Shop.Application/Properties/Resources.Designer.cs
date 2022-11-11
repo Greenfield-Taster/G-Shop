@@ -73,6 +73,16 @@ namespace G_Shop.Application.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap empty_profile {
+            get {
+                object obj = ResourceManager.GetObject("empty-profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Label_printer_25 {
             get {
                 object obj = ResourceManager.GetObject("Label-printer-25", resourceCulture);

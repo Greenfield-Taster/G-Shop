@@ -16,7 +16,8 @@ public class Product
         Season = season;
     }
 
-    public int Id { get; private set; }
+    // TODO: потом добавить приватный set
+    public int Id { get; set; }
 
     public string Name { get; private set; }
     

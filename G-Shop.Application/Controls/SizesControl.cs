@@ -9,6 +9,7 @@ public partial class SizesControl : UserControl
     private Warehouse _warehouse = new (0,0,0,0,0,0,0,0); // Склад = один товар
     private Action<int>? showSizesCountCallback = null;
 
+
     public SizesControl()
     {
         InitializeComponent();
@@ -61,7 +62,13 @@ public partial class SizesControl : UserControl
 
     internal void DisplaySizes(int productId, Action<int> showSizesCount)
     {
-        _warehouse = _warehouseRepository.GetWarehouseByProductId(productId);
+        Warehouse? warehouseFromDatabase = _warehouseRepository.GetWarehouseByProductId(productId);
+
+        if (warehouseFromDatabase is not null) 
+        { 
+            _warehouse = warehouseFromDatabase;
+        }
+
         showSizesCountCallback = showSizesCount;
 
         SwitchCheckedState();
@@ -111,5 +118,11 @@ public partial class SizesControl : UserControl
     internal void SaveChangedToDatabase()
     {
         _warehouseRepository.UpdateWarehouse(_warehouse);
+    }
+
+    internal void AddNewWarehouseToDatabase(int addedProductId)
+    {
+        _warehouse.ProductId = addedProductId;
+        _warehouseRepository.AddNewWarehouse(_warehouse);
     }
 }

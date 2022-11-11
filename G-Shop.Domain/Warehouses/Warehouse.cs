@@ -14,7 +14,7 @@ public class Warehouse
         Xxxl = xxxl;
     }
 
-    public int ProductId { get; private set; }
+    public int ProductId { get; set; }
 
     public int Xs { get; set; }
     
