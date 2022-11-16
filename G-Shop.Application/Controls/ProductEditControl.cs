@@ -7,8 +7,8 @@ namespace G_Shop.Application.Controls;
 public partial class ProductEditControl : UserControl
 {
     private readonly ProductsRepository _productsRepository = RepositoryProvider.ProductsRepository;
-    private Action? productChangedCallback = null; // Хранит в себе какой-то метод из главной формы (Перезагрузить товары)
     private int productId;
+    private Action? _updateProductPageCallback;
 
     public ProductEditControl()
     {
@@ -20,10 +20,12 @@ public partial class ProductEditControl : UserControl
 
     public ProductControlMode Mode { get; set; } = ProductControlMode.Edit;
 
-    // Выводит информацию о продукте
-    internal void DisplayEditProductInfo(Product selectedProduct, Action? onProductChangedCallback)
+    /// <summary>
+    /// Принимает продукт и выводит информацию о нем
+    /// </summary>
+    /// <param name="selectedProduct">Продукт который будет отображен</param>
+    internal void DisplayEditProductInfo(Product selectedProduct)
     {
-        productChangedCallback = onProductChangedCallback;
         textBoxName.Text = selectedProduct.Name;
         comboBoxCategory.SelectedIndex = (int)selectedProduct.Category;
         textBoxPrice.Text = selectedProduct.Price.ToString();
@@ -42,6 +44,11 @@ public partial class ProductEditControl : UserControl
     private void ButtonCancel_Click(object sender, EventArgs e)
     {
         this.SendToBack();
+    }
+
+    public void SubscribeForChanges(Action updateProductPageCallback)
+    {
+        _updateProductPageCallback = updateProductPageCallback;
     }
 
     private void ButtonEdit_Click(object sender, EventArgs e)
@@ -67,8 +74,9 @@ public partial class ProductEditControl : UserControl
             sizesControl1.AddNewWarehouseToDatabase(addedProductId);
         }
 
-
-        productChangedCallback?.Invoke();
+        // Содержит ссылку на метод из главной формы
+        // Перезагрузка товаров из главной формы
+        _updateProductPageCallback?.Invoke();         
         this.SendToBack(); 
     }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBoxBecom = new System.Windows.Forms.ComboBox();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.listViewPoducts = new System.Windows.Forms.ListView();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
@@ -51,16 +51,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDelete)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBoxBecom
+            // comboBoxCategory
             // 
-            this.comboBoxBecom.FormattingEnabled = true;
-            this.comboBoxBecom.Items.AddRange(new object[] {
-            "Мужское",
-            "Женское"});
-            this.comboBoxBecom.Location = new System.Drawing.Point(12, 3);
-            this.comboBoxBecom.Name = "comboBoxBecom";
-            this.comboBoxBecom.Size = new System.Drawing.Size(125, 23);
-            this.comboBoxBecom.TabIndex = 0;
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Location = new System.Drawing.Point(12, 3);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(125, 23);
+            this.comboBoxCategory.TabIndex = 0;
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.ComboBoxCategory_SelectedIndexChanged);
             // 
             // textBoxSearch
             // 
@@ -89,7 +87,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.textBoxSearch);
-            this.panel1.Controls.Add(this.comboBoxBecom);
+            this.panel1.Controls.Add(this.comboBoxCategory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -136,6 +134,7 @@
             // 
             this.productEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productEditControl1.Location = new System.Drawing.Point(0, 0);
+            this.productEditControl1.Mode = G_Shop.Application.Controls.ProductControlMode.Edit;
             this.productEditControl1.Name = "productEditControl1";
             this.productEditControl1.Size = new System.Drawing.Size(294, 526);
             this.productEditControl1.TabIndex = 23;
@@ -206,7 +205,7 @@
 
         #endregion
 
-        private ComboBox comboBoxBecom;
+        private ComboBox comboBoxCategory;
         private TextBox textBoxSearch;
         private ListView listViewPoducts;
         private ImageList imageList;

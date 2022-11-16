@@ -3,7 +3,6 @@ using G_Shop.Application.Helpers;
 using G_Shop.Application.Properties;
 using G_Shop.Database.Repositories;
 using G_Shop.Domain.Products;
-using System.Windows.Forms;
 
 namespace G_Shop.Application.Pages;
 
@@ -15,11 +14,32 @@ public partial class ProductsPage : UserControl
     public ProductsPage()
     {
         InitializeComponent();
+
+        DisplayCategoriesToComboBox();
+    }
+
+    private int GetIndexOfAllCategory()
+    {
+        return comboBoxCategory.Items.Count - 1;
+    }
+
+    private void DisplayCategoriesToComboBox()
+    {
+        comboBoxCategory.Items.AddRange(Enum.GetNames<Category>());
+        comboBoxCategory.Items.Add("All");
+        comboBoxCategory.SelectedIndex = GetIndexOfAllCategory();
     }
 
     private void ProductsPage_Load(object sender, EventArgs e)
     {
-        ReloadProducts();
+        ReloadAndDisplayProductsFormDatabase();
+    }
+
+    private void ReloadAndDisplayProductsFormDatabase()
+    {
+        ReloadProductsFromDatabase();
+        DisplayProductsToListView(_products);
+        SetSelectedProduct();
     }
 
     private void SetSelectedProduct()
@@ -32,12 +52,12 @@ public partial class ProductsPage : UserControl
         listViewPoducts.Items[0].Selected = true;
     }
 
-    private void DisplayProducts()
+    private void DisplayProductsToListView(List<Product> products)
     {
         listViewPoducts.Clear();
         imageList.Images.Clear();
 
-        foreach (Product product in _products)
+        foreach (Product product in products)
         {
             Image image = DatabaseImageConverter.ByteArrayToImage(product.ImageBytes);
             string imageKey = $"key{product.Id}";
@@ -74,7 +94,7 @@ public partial class ProductsPage : UserControl
             return;
         }
 
-        productControl1.DisplayProductInfo(selectedProduct); 
+        productControl1.DisplayProductInfo(selectedProduct);
     }
 
     private void PictureBoxChange_Click(object sender, EventArgs e)
@@ -88,40 +108,65 @@ public partial class ProductsPage : UserControl
             return;
         }
 
-        productEditControl1.DisplayEditProductInfo(selectedProduct, ReloadProducts);
+        productEditControl1.DisplayEditProductInfo(selectedProduct);
         productEditControl1.Mode = ProductControlMode.Edit;
+
+        productEditControl1.SubscribeForChanges(ReloadAndDisplayProductsFormDatabase);
     }
 
-    private void ReloadProducts()
+    private void ReloadProductsFromDatabase()
     {
         _products.Clear();
 
         List<Product> databaseProducts = _productsRepository.GetProducts();
         _products.AddRange(databaseProducts);
-
-        DisplayProducts();
-        SetSelectedProduct();
     }
 
     private void PictureBoxDelete_Click(object sender, EventArgs e)
     {
         Product? product = GetSelectedProduct();
 
-        if (product is null) 
+        if (product is null)
         {
             return;
         }
 
         _productsRepository.DeleteProduct(product.Id);
-        ReloadProducts();
+        ReloadProductsFromDatabase();
     }
 
     private void PictureBoxAdd_Click(object sender, EventArgs e)
     {
-        Product emptyProduct = new(0,"","", Category.Man, 0, DatabaseImageConverter.ImageToByteArray(Resources.empty_profile), "",Season.Autumn);
+        Product emptyProduct = new(0, "", "", Category.Man, 0, DatabaseImageConverter.ImageToByteArray(Resources.empty_profile), "", Season.Autumn);
 
         productEditControl1.BringToFront();
-        productEditControl1.DisplayEditProductInfo(emptyProduct, ReloadProducts);
+        productEditControl1.DisplayEditProductInfo(emptyProduct); 
         productEditControl1.Mode = ProductControlMode.Add;
+
+        productEditControl1.SubscribeForChanges(ReloadAndDisplayProductsFormDatabase);
+    }
+
+    private List<Product> FilterProductByCategory(Category selectedCategory)
+    {
+        return _products
+            .Where(product => product.Category == selectedCategory)
+            .ToList();
+    }
+
+    private void ComboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (comboBoxCategory.SelectedIndex == GetIndexOfAllCategory())
+        {
+            DisplayProductsToListView(_products);
+            SetSelectedProduct();
+            
+            return;
+        }
+        
+        Category selectedCategory = (Category)comboBoxCategory.SelectedIndex;
+
+        List<Product> productsOfSpecificCategory = FilterProductByCategory(selectedCategory);
+        DisplayProductsToListView(productsOfSpecificCategory);
+        SetSelectedProduct();
     }
 }
