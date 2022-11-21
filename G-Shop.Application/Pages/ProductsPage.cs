@@ -132,7 +132,7 @@ public partial class ProductsPage : UserControl
         }
 
         _productsRepository.DeleteProduct(product.Id);
-        ReloadProductsFromDatabase();
+        ReloadAndDisplayProductsFormDatabase();
     }
 
     private void PictureBoxAdd_Click(object sender, EventArgs e)
@@ -168,5 +168,10 @@ public partial class ProductsPage : UserControl
         List<Product> productsOfSpecificCategory = FilterProductByCategory(selectedCategory);
         DisplayProductsToListView(productsOfSpecificCategory);
         SetSelectedProduct();
+    }
+
+    private void productControl1_Load(object sender, EventArgs e)
+    {
+
     }
 }

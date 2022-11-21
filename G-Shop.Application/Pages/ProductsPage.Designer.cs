@@ -64,7 +64,7 @@
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(164, 3);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(414, 23);
+            this.textBoxSearch.Size = new System.Drawing.Size(383, 23);
             this.textBoxSearch.TabIndex = 1;
             // 
             // listViewPoducts
@@ -129,6 +129,7 @@
             this.productControl1.Name = "productControl1";
             this.productControl1.Size = new System.Drawing.Size(294, 526);
             this.productControl1.TabIndex = 22;
+            this.productControl1.Load += new System.EventHandler(this.productControl1_Load);
             // 
             // productEditControl1
             // 

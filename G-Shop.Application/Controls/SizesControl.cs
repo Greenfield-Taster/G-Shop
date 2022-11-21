@@ -17,6 +17,8 @@ public partial class SizesControl : UserControl
 
     internal void SetCountForSelectedSize(int count)
     {
+        showSizesCountCallback?.Invoke(count);
+
         if (radioButtonS.Checked)
         {
             _warehouse.S = count;
@@ -124,5 +126,39 @@ public partial class SizesControl : UserControl
     {
         _warehouse.ProductId = addedProductId;
         _warehouseRepository.AddNewWarehouse(_warehouse);
+    }
+
+    public int GetCurrentSizeCount()
+    {
+        if (radioButtonL.Checked == true)
+        {
+            return _warehouse.L;
+        }
+        if (radioButtonXS.Checked == true)
+        {
+            return _warehouse.Xs;
+        }
+        if (radioButtonS.Checked == true)
+        {
+            return _warehouse.S;
+        }
+        if (radioButtonM.Checked == true)
+        {
+            return _warehouse.M;
+        }
+        if (radioButtonXL.Checked == true)
+        {
+            return _warehouse.Xl;
+        }
+        if (radioButtonXXL.Checked == true)
+        {
+            return _warehouse.Xxl;
+        }
+        if (radioButtonXXXL.Checked == true)
+        {
+            return _warehouse.Xxxl;
+        }
+
+        throw new NotImplementedException("Selected radiobutton not found");
     }
 }

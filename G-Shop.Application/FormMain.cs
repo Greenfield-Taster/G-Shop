@@ -32,6 +32,8 @@ public partial class FormMain : Form
     internal void UserLogedIn()
     {
         userAuthorised = true;
-
+        productsPage1.BringToFront();
+        buttonChek.Visible = true;
+        buttonProducts.Visible = true;
     }
 }

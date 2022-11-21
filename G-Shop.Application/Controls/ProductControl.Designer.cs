@@ -45,8 +45,10 @@
             this.labelMyCountry = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
             this.buttonChek = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -99,7 +101,7 @@
             this.labelMyCount.AutoSize = true;
             this.labelMyCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCount.Location = new System.Drawing.Point(3, 489);
+            this.labelMyCount.Location = new System.Drawing.Point(3, 464);
             this.labelMyCount.Name = "labelMyCount";
             this.labelMyCount.Size = new System.Drawing.Size(144, 30);
             this.labelMyCount.TabIndex = 17;
@@ -110,7 +112,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.sizesControl1, 2);
             this.sizesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sizesControl1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sizesControl1.Location = new System.Drawing.Point(3, 447);
+            this.sizesControl1.Location = new System.Drawing.Point(3, 422);
             this.sizesControl1.Name = "sizesControl1";
             this.sizesControl1.Size = new System.Drawing.Size(294, 39);
             this.sizesControl1.TabIndex = 19;
@@ -120,7 +122,7 @@
             this.labelCount.AutoSize = true;
             this.labelCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCount.Location = new System.Drawing.Point(153, 489);
+            this.labelCount.Location = new System.Drawing.Point(153, 464);
             this.labelCount.Name = "labelCount";
             this.labelCount.Size = new System.Drawing.Size(144, 30);
             this.labelCount.TabIndex = 20;
@@ -131,7 +133,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.buttonChek, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.labelDescription, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelMyCount, 0, 8);
@@ -146,10 +147,12 @@
             this.tableLayoutPanel1.Controls.Add(this.labelCategory, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelMySeason, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelCount, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.buttonChek, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 1, 9);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -159,6 +162,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 585);
             this.tableLayoutPanel1.TabIndex = 21;
@@ -171,7 +175,7 @@
             this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelDescription.Location = new System.Drawing.Point(3, 340);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(294, 104);
+            this.labelDescription.Size = new System.Drawing.Size(294, 79);
             this.labelDescription.TabIndex = 28;
             this.labelDescription.Text = "Опис";
             // 
@@ -257,9 +261,27 @@
             this.buttonChek.Name = "buttonChek";
             this.buttonChek.Size = new System.Drawing.Size(294, 60);
             this.buttonChek.TabIndex = 29;
-            this.buttonChek.Text = "         Добавить в заказ";
-            this.buttonChek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChek.Text = "Добавить в заказ";
             this.buttonChek.UseVisualStyleBackColor = true;
+            this.buttonChek.Click += new System.EventHandler(this.ButtonChek_Click_1);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown1.Location = new System.Drawing.Point(153, 497);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(144, 23);
+            this.numericUpDown1.TabIndex = 30;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ProductControl
             // 
@@ -271,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,5 +316,6 @@
         private Label labelCountry;
         private Label labelDescription;
         private Button buttonChek;
+        private NumericUpDown numericUpDown1;
     }
 }
