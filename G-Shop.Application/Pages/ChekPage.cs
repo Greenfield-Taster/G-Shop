@@ -16,5 +16,10 @@ namespace G_Shop.Application.Pages
         {
             InitializeComponent();
         }
+
+        private void buttonDeleteSetSale_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

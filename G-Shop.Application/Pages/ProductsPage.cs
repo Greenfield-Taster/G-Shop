@@ -169,9 +169,4 @@ public partial class ProductsPage : UserControl
         DisplayProductsToListView(productsOfSpecificCategory);
         SetSelectedProduct();
     }
-
-    private void productControl1_Load(object sender, EventArgs e)
-    {
-
-    }
 }
