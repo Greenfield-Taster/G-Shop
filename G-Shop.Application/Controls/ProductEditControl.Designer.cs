@@ -46,7 +46,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.numericUpDownCount = new System.Windows.Forms.NumericUpDown();
-            this.sizesControl1 = new G_Shop.Application.Controls.SizesControl();
+            this.sizesControl = new G_Shop.Application.Controls.SizesControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).BeginInit();
@@ -243,7 +243,7 @@
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxDescription, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBoxName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDownCount, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.sizesControl1, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.sizesControl, 0, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -276,14 +276,14 @@
             this.numericUpDownCount.TabIndex = 47;
             this.numericUpDownCount.ValueChanged += new System.EventHandler(this.NumericUpDownCount_ValueChanged);
             // 
-            // sizesControl1
+            // sizesControl
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.sizesControl1, 2);
-            this.sizesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sizesControl1.Location = new System.Drawing.Point(3, 452);
-            this.sizesControl1.Name = "sizesControl1";
-            this.sizesControl1.Size = new System.Drawing.Size(294, 39);
-            this.sizesControl1.TabIndex = 48;
+            this.tableLayoutPanel1.SetColumnSpan(this.sizesControl, 2);
+            this.sizesControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sizesControl.Location = new System.Drawing.Point(3, 452);
+            this.sizesControl.Name = "sizesControl";
+            this.sizesControl.Size = new System.Drawing.Size(294, 39);
+            this.sizesControl.TabIndex = 48;
             // 
             // ProductEditControl
             // 
@@ -319,6 +319,6 @@
         private Label labelMyCount;
         private RichTextBox richTextBoxDescription;
         private NumericUpDown numericUpDownCount;
-        private SizesControl sizesControl1;
+        private SizesControl sizesControl;
     }
 }

@@ -1,12 +1,13 @@
-﻿using G_Shop.Database.Repositories;
+﻿using G_Shop.Database;
+using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Warehouses;
 
 namespace G_Shop.Application.Controls;
 
 public partial class SizesControl : UserControl
 {
-    private readonly WarehouseRepository _warehouseRepository = RepositoryProvider.WarehouseRepository;
-    private Warehouse _warehouse = new (0,0,0,0,0,0,0,0); // Склад = один товар
+    private readonly IWarehouseRepository _warehouseRepository = RepositoryProvider.WarehouseRepository;
+    private Warehouse _warehouse = new(0, 0, 0, 0, 0, 0, 0, 0); // Склад = один товар
     private Action<int>? showSizesCountCallback = null;
 
 
@@ -24,31 +25,31 @@ public partial class SizesControl : UserControl
             _warehouse.S = count;
             return;
         }
-        
+
         if (radioButtonL.Checked)
         {
             _warehouse.L = count;
             return;
         }
-        
+
         if (radioButtonXL.Checked)
         {
             _warehouse.Xl = count;
             return;
         }
-        
+
         if (radioButtonM.Checked)
         {
             _warehouse.M = count;
             return;
         }
-        
+
         if (radioButtonXS.Checked)
         {
             _warehouse.Xs = count;
             return;
         }
-        
+
         if (radioButtonXXL.Checked)
         {
             _warehouse.Xxl = count;
@@ -66,8 +67,8 @@ public partial class SizesControl : UserControl
     {
         Warehouse? warehouseFromDatabase = _warehouseRepository.GetWarehouseByProductId(productId);
 
-        if (warehouseFromDatabase is not null) 
-        { 
+        if (warehouseFromDatabase is not null)
+        {
             _warehouse = warehouseFromDatabase;
         }
 

@@ -17,16 +17,16 @@ public class Warehouse
     public int ProductId { get; set; }
 
     public int Xs { get; set; }
-    
+
     public int S { get; set; }
-    
+
     public int M { get; set; }
-    
+
     public int L { get; set; }
-    
+
     public int Xl { get; set; }
-    
+
     public int Xxl { get; set; }
-    
+
     public int Xxxl { get; set; }
 }

@@ -12,12 +12,12 @@ public class Customer
     }
 
     public int Id { get; private set; }
-    
-    public string Country { get; private set;}
-    
-    public string Address { get; private set;}
-    
-    public string Phone { get; private set;}
-    
-    public string Index { get; private set;}
+
+    public string Country { get; private set; }
+
+    public string Address { get; private set; }
+
+    public string Phone { get; private set; }
+
+    public string Index { get; private set; }
 }

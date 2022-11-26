@@ -1,10 +1,11 @@
-﻿using G_Shop.Database.Repositories;
+﻿using G_Shop.Database;
+using G_Shop.Database.Interfaces;
 
 namespace G_Shop.Application.Pages;
 
 public partial class UserPage : UserControl
 {
-    private readonly UsersRepository _usersRepository = new();
+    private readonly IUsersRepository _usersRepository = RepositoryProvider.UsersRepository;
 
     public UserPage()
     {
@@ -15,7 +16,7 @@ public partial class UserPage : UserControl
     {
         bool userExists = _usersRepository.CheckLoginAndPassword(textBoxLogin.Text, textBoxPassword.Text);
 
-        if (userExists == false) 
+        if (userExists == false)
         {
             MessageBox.Show("Такого акаунту не існує.");
             return;

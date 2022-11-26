@@ -1,23 +1,21 @@
 ﻿using G_Shop.Application.Helpers;
-using G_Shop.Application.Pages;
-using G_Shop.Database.Repositories;
-using G_Shop.Domain.Customers;
+using G_Shop.Database;
+using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Products;
 using G_Shop.Domain.Sales;
-using G_Shop.Domain.Users;
 
 namespace G_Shop.Application.Controls;
 
 public partial class ProductControl : UserControl
 {
-    private readonly OperationsRepository _operationsRepository = new();
+    private readonly IOperationsRepository _operationsRepository = RepositoryProvider.OperationsRepository;
 
     private int productId;
 
     public ProductControl()
     {
         InitializeComponent();
-}
+    }
 
     internal void DisplayProductInfo(Product selectedProduct)
     {
@@ -29,7 +27,7 @@ public partial class ProductControl : UserControl
         labelPrice.Text = selectedProduct.Price.ToString();
         labelSeason.Text = selectedProduct.Season.ToString();
         labelDescription.Text = selectedProduct.Description;
-        sizesControl1.DisplaySizes(selectedProduct.Id, UpdateSizesCount);
+        sizesControl.DisplaySizes(selectedProduct.Id, UpdateSizesCount);
     }
 
     private void UpdateSizesCount(int count)
@@ -39,16 +37,16 @@ public partial class ProductControl : UserControl
 
     private void UpdateCountForSelectedSizeToDatabase()
     {
-        int countSize = sizesControl1.GetCurrentSizeCount();
+        int countSize = sizesControl.GetCurrentSizeCount();
         if (numericUpDown1.Value > countSize)
         {
             return;
         }
 
-        int changedCount =  countSize - Convert.ToInt32(numericUpDown1.Value);
-        sizesControl1.SetCountForSelectedSize(changedCount);
-        sizesControl1.SaveChangedToDatabase();
-        
+        int changedCount = countSize - Convert.ToInt32(numericUpDown1.Value);
+        sizesControl.SetCountForSelectedSize(changedCount);
+        sizesControl.SaveChangedToDatabase();
+
     }
 
     private void ButtonChek_Click_1(object sender, EventArgs e)

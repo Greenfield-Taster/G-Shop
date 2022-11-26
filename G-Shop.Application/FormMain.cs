@@ -2,7 +2,7 @@
 
 public partial class FormMain : Form
 {
-    private bool userAuthorised = false; 
+    private bool userAuthorised = false;
 
     public FormMain()
     {

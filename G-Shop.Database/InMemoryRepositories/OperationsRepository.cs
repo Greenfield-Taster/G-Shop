@@ -1,9 +1,9 @@
-﻿using G_Shop.Domain.Products;
+﻿using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Sales;
 
-namespace G_Shop.Database.Repositories;
+namespace G_Shop.Database.InMemoryRepositories;
 
-public class OperationsRepository
+internal class OperationsRepository : IOperationsRepository
 {
     private readonly List<Sale> databaseSales = new()
     {

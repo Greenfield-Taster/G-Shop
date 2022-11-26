@@ -1,7 +1,8 @@
 ﻿using G_Shop.Application.Controls;
 using G_Shop.Application.Helpers;
 using G_Shop.Application.Properties;
-using G_Shop.Database.Repositories;
+using G_Shop.Database;
+using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Products;
 
 namespace G_Shop.Application.Pages;
@@ -9,7 +10,7 @@ namespace G_Shop.Application.Pages;
 public partial class ProductsPage : UserControl
 {
     private readonly List<Product> _products = new(); // Список всех товаров из базы
-    private readonly ProductsRepository _productsRepository = RepositoryProvider.ProductsRepository; // Предоставляет доступ к базе данных
+    private readonly IProductsRepository _productsRepository = RepositoryProvider.ProductsRepository; // Предоставляет доступ к базе данных
 
     public ProductsPage()
     {
@@ -140,7 +141,7 @@ public partial class ProductsPage : UserControl
         Product emptyProduct = new(0, "", "", Category.Man, 0, DatabaseImageConverter.ImageToByteArray(Resources.empty_profile), "", Season.Autumn);
 
         productEditControl1.BringToFront();
-        productEditControl1.DisplayEditProductInfo(emptyProduct); 
+        productEditControl1.DisplayEditProductInfo(emptyProduct);
         productEditControl1.Mode = ProductControlMode.Add;
 
         productEditControl1.SubscribeForChanges(ReloadAndDisplayProductsFormDatabase);
@@ -159,10 +160,10 @@ public partial class ProductsPage : UserControl
         {
             DisplayProductsToListView(_products);
             SetSelectedProduct();
-            
+
             return;
         }
-        
+
         Category selectedCategory = (Category)comboBoxCategory.SelectedIndex;
 
         List<Product> productsOfSpecificCategory = FilterProductByCategory(selectedCategory);

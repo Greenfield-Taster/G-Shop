@@ -1,8 +1,9 @@
-﻿using G_Shop.Domain.Warehouses;
+﻿using G_Shop.Database.Interfaces;
+using G_Shop.Domain.Warehouses;
 
-namespace G_Shop.Database.Repositories;
+namespace G_Shop.Database.InMemoryRepositories;
 
-public class WarehouseRepository
+internal class WarehouseRepository : IWarehouseRepository
 {
     private readonly List<Warehouse> dataBaseWarehouse = new()
     {

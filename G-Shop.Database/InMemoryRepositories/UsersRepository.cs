@@ -1,11 +1,12 @@
-﻿using G_Shop.Domain.Users;
+﻿using G_Shop.Database.Interfaces;
+using G_Shop.Domain.Users;
 
-namespace G_Shop.Database.Repositories;
+namespace G_Shop.Database.InMemoryRepositories;
 
-public class UsersRepository
+internal class UsersRepository : IUsersRepository
 {
     private readonly List<User> dataBaseUsers = new()
-    { 
+    {
         new User(1, "UserName","UserSurname", "UserPatronymic",Position.Сashier,"UserPhone","Address","user1","1111"),
         new User(1, "UserName2","UserSurname2", "UserPatronymic2",Position.Manager,"UserPhone2","Address2","user2","2222")
     };

@@ -1,10 +1,10 @@
-﻿using G_Shop.Database.Properties;
+﻿using G_Shop.Database.Interfaces;
+using G_Shop.Database.Properties;
 using G_Shop.Domain.Products;
-using G_Shop.Domain.Warehouses;
 
-namespace G_Shop.Database.Repositories;
+namespace G_Shop.Database.InMemoryRepositories;
 
-public class ProductsRepository
+internal class ProductsRepository : IProductsRepository
 {
     private readonly List<Product> dataBaseProducts = new()
     {
@@ -22,7 +22,7 @@ public class ProductsRepository
             if (dataBaseProducts[i].Id == id)
             {
                 dataBaseProducts.RemoveAt(i);
-                WarehouseRepository warehouseRepository = RepositoryProvider.WarehouseRepository;
+                IWarehouseRepository warehouseRepository = RepositoryProvider.WarehouseRepository;
                 warehouseRepository.RemoveWarehouse(id);
                 return;
             }
@@ -52,5 +52,5 @@ public class ProductsRepository
         addedProduct.Id = dataBaseProducts.Count + 1;
         dataBaseProducts.Add(addedProduct);
         return addedProduct.Id;
-    }   
+    }
 }

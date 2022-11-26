@@ -34,7 +34,6 @@
             this.labelMyPrice = new System.Windows.Forms.Label();
             this.labelMySeason = new System.Windows.Forms.Label();
             this.labelMyCount = new System.Windows.Forms.Label();
-            this.sizesControl1 = new G_Shop.Application.Controls.SizesControl();
             this.labelCount = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.labelCategory = new System.Windows.Forms.Label();
             this.buttonChek = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.sizesControl = new G_Shop.Application.Controls.SizesControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -107,16 +107,6 @@
             this.labelMyCount.TabIndex = 17;
             this.labelMyCount.Text = "Количество";
             // 
-            // sizesControl1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.sizesControl1, 2);
-            this.sizesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sizesControl1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sizesControl1.Location = new System.Drawing.Point(3, 422);
-            this.sizesControl1.Name = "sizesControl1";
-            this.sizesControl1.Size = new System.Drawing.Size(294, 39);
-            this.sizesControl1.TabIndex = 19;
-            // 
             // labelCount
             // 
             this.labelCount.AutoSize = true;
@@ -137,7 +127,6 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelMyCount, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.labelPrice, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.sizesControl1, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.labelSeason, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelCountry, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelName, 0, 1);
@@ -149,6 +138,7 @@
             this.tableLayoutPanel1.Controls.Add(this.labelCount, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.buttonChek, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.sizesControl, 0, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -283,6 +273,15 @@
             0,
             0});
             // 
+            // sizesControl
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.sizesControl, 2);
+            this.sizesControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sizesControl.Location = new System.Drawing.Point(3, 422);
+            this.sizesControl.Name = "sizesControl";
+            this.sizesControl.Size = new System.Drawing.Size(294, 39);
+            this.sizesControl.TabIndex = 31;
+            // 
             // ProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -305,7 +304,6 @@
         private Label labelMyPrice;
         private Label labelMySeason;
         private Label labelMyCount;
-        private SizesControl sizesControl1;
         private Label labelCount;
         private TableLayoutPanel tableLayoutPanel1;
         private Label labelCategory;
@@ -317,5 +315,6 @@
         private Label labelDescription;
         private Button buttonChek;
         private NumericUpDown numericUpDown1;
+        private SizesControl sizesControl;
     }
 }

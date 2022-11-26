@@ -1,8 +1,9 @@
-﻿using G_Shop.Domain.Customers;
+﻿using G_Shop.Database.Interfaces;
+using G_Shop.Domain.Customers;
 
-namespace G_Shop.Database.Repositories;
+namespace G_Shop.Database.InMemoryRepositories;
 
-public class CustomersRepository
+internal class CustomersRepository : ICustomersRepository
 {
     private readonly List<Customer> databaseCustomers = new()
     {
