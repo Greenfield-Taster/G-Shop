@@ -2,6 +2,6 @@
 
 public enum Category
 {
-    Man,
-    Woman,
+    Man = 0,
+    Woman = 1,
 }

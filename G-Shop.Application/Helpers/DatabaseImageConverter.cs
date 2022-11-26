@@ -13,7 +13,12 @@ internal static class DatabaseImageConverter
 
     public static Image ByteArrayToImage(byte[] byteArrayIn)
     {
-        MemoryStream ms = new MemoryStream(byteArrayIn);
+        if (byteArrayIn.Length == 0)
+        {
+            return Properties.Resources.empty_profile;
+        }
+
+        MemoryStream ms = new MemoryStream(byteArrayIn);        
         Image returnImage = Image.FromStream(ms);
         return returnImage;
     }

@@ -1,4 +1,4 @@
-﻿using G_Shop.Database.InMemoryRepositories;
+﻿using G_Shop.Database.DatabaseRepositories;
 using G_Shop.Database.Interfaces;
 
 namespace G_Shop.Database;

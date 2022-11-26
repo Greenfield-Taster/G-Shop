@@ -10,9 +10,10 @@ internal class WarehouseRepository : IWarehouseRepository
         throw new NotImplementedException();
     }
 
+    // TODO: change warehouse sizes
     public Warehouse? GetWarehouseByProductId(int productId)
     {
-        throw new NotImplementedException();
+        return new Warehouse(productId, 3,2,5,4,3,2,3);
     }
 
     public void RemoveWarehouse(int id)

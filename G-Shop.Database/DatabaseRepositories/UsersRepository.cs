@@ -4,8 +4,8 @@ namespace G_Shop.Database.DatabaseRepositories;
 
 internal class UsersRepository : IUsersRepository
 {
-    public bool CheckLoginAndPassword(string text1, string text2)
+    public bool CheckLoginAndPassword(string login, string password)
     {
-        throw new NotImplementedException();
+        return true;
     }
 }
