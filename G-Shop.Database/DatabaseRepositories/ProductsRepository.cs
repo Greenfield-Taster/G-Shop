@@ -1,4 +1,5 @@
-﻿using G_Shop.Database.DatabaseRepositories.Helpers;
+﻿using Dapper;
+using G_Shop.Database.DatabaseRepositories.Helpers;
 using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Products;
 using System.Data;
@@ -15,17 +16,17 @@ internal class ProductsRepository : IProductsRepository
 
     public void DeleteProduct(int id)
     {
-        throw new NotImplementedException();
+        string sql = $"DELETE FROM Products WHERE Id = {id};";
+        DatabaseConnector.Connection.Execute(sql);
     }
 
     public List<Product> GetProducts()
     {
         List<Product> products = new();
 
-        SqlConnection connection = new SqlConnection(DatabaseConnector.ConnectionString);
-        connection.Open();
+        DatabaseConnector.Connection.Open();
 
-        SqlCommand command = connection.CreateCommand();
+        SqlCommand command = DatabaseConnector.Connection.CreateCommand();
         command.CommandText = "SELECT * FROM Products;";
 
         SqlDataReader reader = command.ExecuteReader();
@@ -45,12 +46,22 @@ internal class ProductsRepository : IProductsRepository
             products.Add(product);
         }
 
-        connection.Close();
+        DatabaseConnector.Connection.Close();
         return products;
     }
 
     public void UpdateProduct(Product product)
     {
-        throw new NotImplementedException();
+        string sqlQuery = @"UPDATE Products SET 
+                                            Name = @Name, 
+                                            Country = @Country, 
+                                            Category = @Category, 
+                                            Price = @Price, 
+                                            Image = @ImageBytes,
+                                            Description = @Description, 
+                                            Season = @Season
+                                            WHERE Id = @Id;";
+
+        DatabaseConnector.Connection.Execute(sqlQuery, product);
     }
 }

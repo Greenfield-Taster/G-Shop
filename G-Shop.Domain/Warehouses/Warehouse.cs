@@ -2,21 +2,25 @@
 
 public class Warehouse
 {
+    internal Warehouse()
+    {
+    }
+
     public Warehouse(int productId, int xs, int s, int m, int l, int xl, int xxl, int xxxl)
     {
         ProductId = productId;
-        Xs = xs;
+        XS = xs;
         S = s;
         M = m;
         L = l;
-        Xl = xl;
-        Xxl = xxl;
-        Xxxl = xxxl;
+        XL = xl;
+        XXL = xxl;
+        XXXL = xxxl;
     }
 
     public int ProductId { get; set; }
 
-    public int Xs { get; set; }
+    public int XS { get; set; }
 
     public int S { get; set; }
 
@@ -24,9 +28,9 @@ public class Warehouse
 
     public int L { get; set; }
 
-    public int Xl { get; set; }
+    public int XL { get; set; }
 
-    public int Xxl { get; set; }
+    public int XXL { get; set; }
 
-    public int Xxxl { get; set; }
+    public int XXXL { get; set; }
 }

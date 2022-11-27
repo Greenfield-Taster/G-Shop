@@ -34,7 +34,7 @@ public partial class SizesControl : UserControl
 
         if (radioButtonXL.Checked)
         {
-            _warehouse.Xl = count;
+            _warehouse.XL = count;
             return;
         }
 
@@ -46,19 +46,19 @@ public partial class SizesControl : UserControl
 
         if (radioButtonXS.Checked)
         {
-            _warehouse.Xs = count;
+            _warehouse.XS = count;
             return;
         }
 
         if (radioButtonXXL.Checked)
         {
-            _warehouse.Xxl = count;
+            _warehouse.XXL = count;
             return;
         }
 
         if (radioButtonXXXL.Checked)
         {
-            _warehouse.Xxxl = count;
+            _warehouse.XXXL = count;
             return;
         }
     }
@@ -85,7 +85,7 @@ public partial class SizesControl : UserControl
 
     private void RadioButtonXS_CheckedChanged(object sender, EventArgs e)
     {
-        showSizesCountCallback?.Invoke(_warehouse.Xs);
+        showSizesCountCallback?.Invoke(_warehouse.XS);
     }
 
     private void RadioButtonS_CheckedChanged(object sender, EventArgs e)
@@ -105,17 +105,17 @@ public partial class SizesControl : UserControl
 
     private void RadioButtonXL_CheckedChanged(object sender, EventArgs e)
     {
-        showSizesCountCallback?.Invoke(_warehouse.Xl);
+        showSizesCountCallback?.Invoke(_warehouse.XL);
     }
 
     private void RadioButtonXXL_CheckedChanged(object sender, EventArgs e)
     {
-        showSizesCountCallback?.Invoke(_warehouse.Xxl);
+        showSizesCountCallback?.Invoke(_warehouse.XXL);
     }
 
     private void RadioButtonXXXL_CheckedChanged(object sender, EventArgs e)
     {
-        showSizesCountCallback?.Invoke(_warehouse.Xxxl);
+        showSizesCountCallback?.Invoke(_warehouse.XXXL);
     }
 
     internal void SaveChangedToDatabase()
@@ -137,7 +137,7 @@ public partial class SizesControl : UserControl
         }
         if (radioButtonXS.Checked == true)
         {
-            return _warehouse.Xs;
+            return _warehouse.XS;
         }
         if (radioButtonS.Checked == true)
         {
@@ -149,15 +149,15 @@ public partial class SizesControl : UserControl
         }
         if (radioButtonXL.Checked == true)
         {
-            return _warehouse.Xl;
+            return _warehouse.XL;
         }
         if (radioButtonXXL.Checked == true)
         {
-            return _warehouse.Xxl;
+            return _warehouse.XXL;
         }
         if (radioButtonXXXL.Checked == true)
         {
-            return _warehouse.Xxxl;
+            return _warehouse.XXXL;
         }
 
         throw new NotImplementedException("Selected radiobutton not found");

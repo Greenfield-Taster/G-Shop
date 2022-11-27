@@ -24,6 +24,7 @@ public partial class ProductControl : UserControl
         labelName.Text = selectedProduct.Name;
         pictureBox1.Image = DatabaseImageConverter.ByteArrayToImage(selectedProduct.ImageBytes);
         labelCategory.Text = selectedProduct.Category.ToString();
+        labelCountry.Text = selectedProduct.Country;
         labelPrice.Text = selectedProduct.Price.ToString();
         labelSeason.Text = selectedProduct.Season.ToString();
         labelDescription.Text = selectedProduct.Description;
