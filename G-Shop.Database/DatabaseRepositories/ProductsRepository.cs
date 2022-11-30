@@ -2,6 +2,7 @@
 using G_Shop.Database.DatabaseRepositories.Helpers;
 using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Products;
+using G_Shop.Domain.Warehouses;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -16,8 +17,13 @@ internal class ProductsRepository : IProductsRepository
                             VALUES (@Name, @Country, @Category, @Price, @Description, @Season)
                             SELECT Id FROM Products 
                             WHERE Id =  (SELECT MAX(Id) FROM Products);";
+
         DatabaseConnector.Connection.Execute(sql, product);
-        return product.Id;
+
+        string sqlReturnLastId = "SELECT MAX(Id) FROM Products;";
+        int productLastId = DatabaseConnector.Connection.QuerySingleOrDefault<int>(sqlReturnLastId);
+
+        return productLastId;
     }
 
     public void DeleteProduct(int id)
