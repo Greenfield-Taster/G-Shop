@@ -6,18 +6,16 @@ using G_Shop.Domain.Warehouses;
 using System.Collections.Generic;
 
 namespace G_Shop.Database.DatabaseRepositories;
-
 internal class WarehouseRepository : IWarehouseRepository
 {
     public void AddNewWarehouse(Warehouse warehouse)
     {
         string sql = @"INSERT INTO Warehouse(ProductId, XS, S, M, L, XL, XXL, XXXL) 
                         VALUES( @ProductId, @XS, @S, @M, @L, @XL, @XXL, @XXXL)";
-        
+
         DatabaseConnector.Connection.Execute(sql, warehouse);
     }
 
-    // TODO: change warehouse sizes
     public Warehouse GetWarehouseByProductId(int productId)
     {
         string sqlQuery = $"SELECT * FROM Warehouse WHERE ProductId = {productId};";
@@ -26,7 +24,6 @@ internal class WarehouseRepository : IWarehouseRepository
         if (warehouse is null) 
         {
             warehouse = new Warehouse(productId, 0, 0, 0, 0, 0, 0, 0);
-            AddNewWarehouse(warehouse);
         }
 
         return warehouse;

@@ -4,6 +4,7 @@ using G_Shop.Database.Interfaces;
 using G_Shop.Domain.Products;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace G_Shop.Database.DatabaseRepositories;
 
@@ -11,7 +12,12 @@ internal class ProductsRepository : IProductsRepository
 {
     public int AddNewProduct(Product product)
     {
-        throw new NotImplementedException();
+        string sql = @"INSERT INTO Products (Name, Country, Category, Price, Description, Season)
+                            VALUES (@Name, @Country, @Category, @Price, @Description, @Season)
+                            SELECT Id FROM Products 
+                            WHERE Id =  (SELECT MAX(Id) FROM Products);";
+        DatabaseConnector.Connection.Execute(sql, product);
+        return product.Id;
     }
 
     public void DeleteProduct(int id)

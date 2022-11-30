@@ -29,6 +29,7 @@ public partial class ProductEditControl : UserControl
     {
         textBoxName.Text = selectedProduct.Name;
         comboBoxCategory.SelectedIndex = (int)selectedProduct.Category;
+        textBoxCountry.Text = selectedProduct.Country;
         textBoxPrice.Text = selectedProduct.Price.ToString();
         comboBoxSeason.SelectedIndex = (int)selectedProduct.Season;
         richTextBoxDescription.Text = selectedProduct.Description;
