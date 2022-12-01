@@ -8,7 +8,7 @@ public class Sale
         DateAndTime = dataTime;
         ProductId = productId;
         UserId = userId;
-        Amoount = amount;
+        Amount = amount;
         Price = price;
         ChekId = chekId;
         CustomerId = customerId;
@@ -21,7 +21,7 @@ public class Sale
 
     public int UserId { get; private set; }
 
-    public int Amoount { get; private set; }
+    public int Amount { get; private set; }
 
     public decimal Price { get; private set; }
 
