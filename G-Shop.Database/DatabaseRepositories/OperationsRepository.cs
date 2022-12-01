@@ -9,8 +9,8 @@ internal class OperationsRepository : IOperationsRepository
 {
     public void AddNewSale(Sale sale)
     {
-        string sql = @"INSERT INTO Sales(ProductId, UserId, Amount, Price, ChekId, CustomerId) 
-                        VALUES(@ProductId, @UserId, @Amount, @Price, @ChekId, @CustomerId);";
+        string sql = @"INSERT INTO Sales(ProductId,DataTime, UserId, Amount, Price, ChekId, CustomerId) 
+                        VALUES(@ProductId, @DateAndTime, @UserId, @Amount, @Price, @ChekId, @CustomerId);";
         DatabaseConnector.Connection.Execute(sql, sale);
     }
 
