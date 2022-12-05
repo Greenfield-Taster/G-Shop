@@ -13,8 +13,8 @@ internal class ProductsRepository : IProductsRepository
 {
     public int AddNewProduct(Product product)
     {
-        string sql = @"INSERT INTO Products (Name, Country, Category, Price, Description, Season)
-                            VALUES (@Name, @Country, @Category, @Price, @Description, @Season)
+        string sql = @"INSERT INTO Products (Name, Country, Category, Price, Image, Description, Season)
+                            VALUES (@Name, @Country, @Category, @Price, @ImageBytes, @Description, @Season)
                             SELECT Id FROM Products 
                             WHERE Id =  (SELECT MAX(Id) FROM Products);";
 

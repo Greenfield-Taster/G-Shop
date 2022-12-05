@@ -170,4 +170,9 @@ public partial class ProductsPage : UserControl
         DisplayProductsToListView(productsOfSpecificCategory);
         SetSelectedProduct();
     }
+
+    private void textBoxSearch_TextChanged(object sender, EventArgs e)
+    {
+        //string sql = $"SELECT * FROM Products WHERE Name LIKE '%{textBoxSearch.Text}%' ;";
+    }
 }

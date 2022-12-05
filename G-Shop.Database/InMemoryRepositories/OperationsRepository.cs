@@ -18,6 +18,11 @@ internal class OperationsRepository : IOperationsRepository
         databaseSales.Add(addedSale);
     }
 
+    public void ClearDatabase()
+    {
+        throw new NotImplementedException();
+    }
+
     public int GetNextCheckNumber()
     {
         int maxCheckId = databaseSales.Max(sale => sale.ChekId);

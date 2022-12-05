@@ -29,24 +29,35 @@
         private void InitializeComponent()
         {
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.buttonClearAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // reportViewer
             // 
-            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "ReportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(697, 309);
+            this.reportViewer.Size = new System.Drawing.Size(700, 449);
             this.reportViewer.TabIndex = 0;
+            // 
+            // buttonClearAll
+            // 
+            this.buttonClearAll.Location = new System.Drawing.Point(720, 15);
+            this.buttonClearAll.Name = "buttonClearAll";
+            this.buttonClearAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonClearAll.TabIndex = 1;
+            this.buttonClearAll.Text = "Clear all";
+            this.buttonClearAll.UseVisualStyleBackColor = true;
+            this.buttonClearAll.Click += new System.EventHandler(this.buttonClearAll_Click);
             // 
             // ChekPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonClearAll);
             this.Controls.Add(this.reportViewer);
             this.Name = "ChekPage";
-            this.Size = new System.Drawing.Size(697, 309);
+            this.Size = new System.Drawing.Size(817, 449);
             this.Load += new System.EventHandler(this.ChekPage_Load);
             this.ResumeLayout(false);
 
@@ -55,5 +66,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private Button buttonClearAll;
     }
 }

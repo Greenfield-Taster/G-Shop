@@ -19,9 +19,9 @@ internal class OperationsRepository : IOperationsRepository
         return 2;
     }
 
-    //public void ClearDatabase()
-    //{
-    //    string sql = "DELETE FROM Sales WHERE Id>0;";
-    //    DatabaseConnector.Connection.Execute(sql);
-    //}
+    public void ClearDatabase()
+    {
+        string sql = "DELETE FROM Sales WHERE Id>0;";
+        DatabaseConnector.Connection.Execute(sql);
+    }
 }
