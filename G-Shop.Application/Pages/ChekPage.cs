@@ -13,7 +13,6 @@ public partial class ChekPage : UserControl
 
     private void ChekPage_Load(object sender, EventArgs e)
     {
-        //reportViewer.LocalReport.ReportEmbeddedResource = "G-Shop.Application.Reports.SalesReport.rdlc";
         reportViewer.LocalReport.ReportPath = "Reports/SalesReport.rdlc";
 
         SalesReportDataSet salesReportDataSet = new();
