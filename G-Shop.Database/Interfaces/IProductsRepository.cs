@@ -8,5 +8,6 @@ public interface IProductsRepository
     void DeleteProduct(int id);
 
     List<Product> GetProducts();
+    void SearchProduct(string text);
     void UpdateProduct(Product product);
 }

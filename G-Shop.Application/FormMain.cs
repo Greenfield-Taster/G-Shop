@@ -26,6 +26,8 @@ public partial class FormMain : Form
             return;
         }
 
+        this.chekPage1.Refresh();
+
         chekPage1.BringToFront();
     }
 

@@ -53,4 +53,9 @@ internal class ProductsRepository : IProductsRepository
         dataBaseProducts.Add(addedProduct);
         return addedProduct.Id;
     }
+
+    public void SearchProduct(string text)
+    {
+        throw new NotImplementedException();
+    }
 }

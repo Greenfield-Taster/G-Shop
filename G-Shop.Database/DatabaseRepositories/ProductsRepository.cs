@@ -76,4 +76,12 @@ internal class ProductsRepository : IProductsRepository
 
         DatabaseConnector.Connection.Execute(sqlQuery, product);
     }
+
+    public void SearchProduct(string text)
+    {
+        string sql = $"SELECT * FROM Products WHERE Name LIKE '%{text}%' ;";
+
+        DatabaseConnector.Connection.Execute(sql);
+
+    }
 }

@@ -24,4 +24,10 @@ internal class OperationsRepository : IOperationsRepository
         string sql = "DELETE FROM Sales WHERE Id>0;";
         DatabaseConnector.Connection.Execute(sql);
     }
+
+    public void DisplayAllSales()
+    {
+        string sql = "SELECT * FROM Sales;";
+        DatabaseConnector.Connection.Execute(sql);
+    }
 }

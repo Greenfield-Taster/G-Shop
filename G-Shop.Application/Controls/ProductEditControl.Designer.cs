@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxName, 2);
             this.textBoxName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxName.Location = new System.Drawing.Point(3, 203);
+            this.textBoxName.Location = new System.Drawing.Point(3, 128);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(294, 22);
             this.textBoxName.TabIndex = 46;
@@ -66,9 +66,9 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.richTextBoxDescription, 2);
             this.richTextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxDescription.Location = new System.Drawing.Point(3, 368);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(3, 278);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(294, 78);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(294, 186);
             this.richTextBoxDescription.TabIndex = 43;
             this.richTextBoxDescription.Text = "";
             // 
@@ -77,9 +77,9 @@
             this.labelMyCount.AutoSize = true;
             this.labelMyCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCount.Location = new System.Drawing.Point(3, 494);
+            this.labelMyCount.Location = new System.Drawing.Point(3, 512);
             this.labelMyCount.Name = "labelMyCount";
-            this.labelMyCount.Size = new System.Drawing.Size(144, 25);
+            this.labelMyCount.Size = new System.Drawing.Size(144, 23);
             this.labelMyCount.TabIndex = 20;
             this.labelMyCount.Text = "Количество";
             // 
@@ -89,9 +89,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 340);
+            this.label1.Location = new System.Drawing.Point(3, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 25);
+            this.label1.Size = new System.Drawing.Size(294, 23);
             this.label1.TabIndex = 42;
             this.label1.Text = "Опис";
             // 
@@ -99,7 +99,7 @@
             // 
             this.comboBoxSeason.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxSeason.FormattingEnabled = true;
-            this.comboBoxSeason.Location = new System.Drawing.Point(153, 293);
+            this.comboBoxSeason.Location = new System.Drawing.Point(153, 209);
             this.comboBoxSeason.Name = "comboBoxSeason";
             this.comboBoxSeason.Size = new System.Drawing.Size(144, 23);
             this.comboBoxSeason.TabIndex = 41;
@@ -108,7 +108,7 @@
             // 
             this.textBoxPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxPrice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPrice.Location = new System.Drawing.Point(153, 318);
+            this.textBoxPrice.Location = new System.Drawing.Point(153, 232);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(144, 22);
             this.textBoxPrice.TabIndex = 38;
@@ -117,7 +117,7 @@
             // 
             this.comboBoxCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(153, 243);
+            this.comboBoxCategory.Location = new System.Drawing.Point(153, 163);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(144, 23);
             this.comboBoxCategory.TabIndex = 40;
@@ -127,9 +127,9 @@
             this.labelMyPrice.AutoSize = true;
             this.labelMyPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyPrice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyPrice.Location = new System.Drawing.Point(3, 315);
+            this.labelMyPrice.Location = new System.Drawing.Point(3, 229);
             this.labelMyPrice.Name = "labelMyPrice";
-            this.labelMyPrice.Size = new System.Drawing.Size(144, 25);
+            this.labelMyPrice.Size = new System.Drawing.Size(144, 23);
             this.labelMyPrice.TabIndex = 30;
             this.labelMyPrice.Text = "Ціна";
             // 
@@ -138,9 +138,9 @@
             this.labelMySeason.AutoSize = true;
             this.labelMySeason.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMySeason.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMySeason.Location = new System.Drawing.Point(3, 290);
+            this.labelMySeason.Location = new System.Drawing.Point(3, 206);
             this.labelMySeason.Name = "labelMySeason";
-            this.labelMySeason.Size = new System.Drawing.Size(144, 25);
+            this.labelMySeason.Size = new System.Drawing.Size(144, 23);
             this.labelMySeason.TabIndex = 31;
             this.labelMySeason.Text = "Сезон";
             // 
@@ -148,7 +148,7 @@
             // 
             this.textBoxCountry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxCountry.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxCountry.Location = new System.Drawing.Point(153, 268);
+            this.textBoxCountry.Location = new System.Drawing.Point(153, 186);
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(144, 22);
             this.textBoxCountry.TabIndex = 36;
@@ -158,9 +158,9 @@
             this.labelMyCategory.AutoSize = true;
             this.labelMyCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCategory.Location = new System.Drawing.Point(3, 240);
+            this.labelMyCategory.Location = new System.Drawing.Point(3, 160);
             this.labelMyCategory.Name = "labelMyCategory";
-            this.labelMyCategory.Size = new System.Drawing.Size(144, 25);
+            this.labelMyCategory.Size = new System.Drawing.Size(144, 23);
             this.labelMyCategory.TabIndex = 29;
             this.labelMyCategory.Text = "Категорія";
             // 
@@ -169,9 +169,9 @@
             this.labelMyCountry.AutoSize = true;
             this.labelMyCountry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCountry.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCountry.Location = new System.Drawing.Point(3, 265);
+            this.labelMyCountry.Location = new System.Drawing.Point(3, 183);
             this.labelMyCountry.Name = "labelMyCountry";
-            this.labelMyCountry.Size = new System.Drawing.Size(144, 25);
+            this.labelMyCountry.Size = new System.Drawing.Size(144, 23);
             this.labelMyCountry.TabIndex = 33;
             this.labelMyCountry.Text = "Країна";
             // 
@@ -182,7 +182,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 194);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -197,9 +197,9 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.Black;
             this.buttonEdit.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
             this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(153, 522);
+            this.buttonEdit.Location = new System.Drawing.Point(153, 538);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(144, 60);
+            this.buttonEdit.Size = new System.Drawing.Size(144, 44);
             this.buttonEdit.TabIndex = 44;
             this.buttonEdit.Text = "Відмінити";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -214,9 +214,9 @@
             this.buttonCancel.ForeColor = System.Drawing.Color.Black;
             this.buttonCancel.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
             this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancel.Location = new System.Drawing.Point(3, 522);
+            this.buttonCancel.Location = new System.Drawing.Point(3, 538);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(144, 60);
+            this.buttonCancel.Size = new System.Drawing.Size(144, 44);
             this.buttonCancel.TabIndex = 45;
             this.buttonCancel.Text = "Готово";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -248,24 +248,24 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 585);
             this.tableLayoutPanel1.TabIndex = 40;
             // 
             // numericUpDownCount
             // 
             this.numericUpDownCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDownCount.Location = new System.Drawing.Point(153, 497);
+            this.numericUpDownCount.Location = new System.Drawing.Point(153, 515);
             this.numericUpDownCount.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -280,7 +280,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.sizesControl, 2);
             this.sizesControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sizesControl.Location = new System.Drawing.Point(3, 452);
+            this.sizesControl.Location = new System.Drawing.Point(3, 470);
             this.sizesControl.Name = "sizesControl";
             this.sizesControl.Size = new System.Drawing.Size(294, 39);
             this.sizesControl.TabIndex = 48;

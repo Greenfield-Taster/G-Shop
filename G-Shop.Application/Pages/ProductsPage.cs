@@ -173,6 +173,7 @@ public partial class ProductsPage : UserControl
 
     private void textBoxSearch_TextChanged(object sender, EventArgs e)
     {
-        //string sql = $"SELECT * FROM Products WHERE Name LIKE '%{textBoxSearch.Text}%' ;";
+        _productsRepository.SearchProduct(textBoxSearch.Text);
+        listViewPoducts.Update();
     }
 }

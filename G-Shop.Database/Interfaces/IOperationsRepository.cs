@@ -6,5 +6,6 @@ public interface IOperationsRepository
 {
     void AddNewSale(Sale sale);
     void ClearDatabase();
+    void DisplayAllSales();
     int GetNextCheckNumber();
 }

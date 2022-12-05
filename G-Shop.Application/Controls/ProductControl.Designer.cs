@@ -58,7 +58,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 194);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -68,9 +68,9 @@
             this.labelMyCategory.AutoSize = true;
             this.labelMyCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCategory.Location = new System.Drawing.Point(3, 240);
+            this.labelMyCategory.Location = new System.Drawing.Point(3, 160);
             this.labelMyCategory.Name = "labelMyCategory";
-            this.labelMyCategory.Size = new System.Drawing.Size(144, 25);
+            this.labelMyCategory.Size = new System.Drawing.Size(144, 23);
             this.labelMyCategory.TabIndex = 1;
             this.labelMyCategory.Text = "Категорія";
             // 
@@ -79,9 +79,9 @@
             this.labelMyPrice.AutoSize = true;
             this.labelMyPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyPrice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyPrice.Location = new System.Drawing.Point(3, 315);
+            this.labelMyPrice.Location = new System.Drawing.Point(3, 229);
             this.labelMyPrice.Name = "labelMyPrice";
-            this.labelMyPrice.Size = new System.Drawing.Size(144, 25);
+            this.labelMyPrice.Size = new System.Drawing.Size(144, 23);
             this.labelMyPrice.TabIndex = 2;
             this.labelMyPrice.Text = "Ціна";
             // 
@@ -90,9 +90,9 @@
             this.labelMySeason.AutoSize = true;
             this.labelMySeason.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMySeason.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMySeason.Location = new System.Drawing.Point(3, 290);
+            this.labelMySeason.Location = new System.Drawing.Point(3, 206);
             this.labelMySeason.Name = "labelMySeason";
-            this.labelMySeason.Size = new System.Drawing.Size(144, 25);
+            this.labelMySeason.Size = new System.Drawing.Size(144, 23);
             this.labelMySeason.TabIndex = 3;
             this.labelMySeason.Text = "Сезон";
             // 
@@ -101,9 +101,9 @@
             this.labelMyCount.AutoSize = true;
             this.labelMyCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCount.Location = new System.Drawing.Point(3, 464);
+            this.labelMyCount.Location = new System.Drawing.Point(3, 489);
             this.labelMyCount.Name = "labelMyCount";
-            this.labelMyCount.Size = new System.Drawing.Size(144, 30);
+            this.labelMyCount.Size = new System.Drawing.Size(144, 23);
             this.labelMyCount.TabIndex = 17;
             this.labelMyCount.Text = "Количество";
             // 
@@ -112,9 +112,9 @@
             this.labelCount.AutoSize = true;
             this.labelCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCount.Location = new System.Drawing.Point(153, 464);
+            this.labelCount.Location = new System.Drawing.Point(153, 489);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(144, 30);
+            this.labelCount.Size = new System.Drawing.Size(144, 23);
             this.labelCount.TabIndex = 20;
             this.labelCount.Text = "labelCount";
             // 
@@ -143,17 +143,17 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 585);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
@@ -163,9 +163,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.labelDescription, 2);
             this.labelDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDescription.Location = new System.Drawing.Point(3, 340);
+            this.labelDescription.Location = new System.Drawing.Point(3, 252);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(294, 79);
+            this.labelDescription.Size = new System.Drawing.Size(294, 192);
             this.labelDescription.TabIndex = 28;
             this.labelDescription.Text = "Опис";
             // 
@@ -174,9 +174,9 @@
             this.labelPrice.AutoSize = true;
             this.labelPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelPrice.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPrice.Location = new System.Drawing.Point(153, 315);
+            this.labelPrice.Location = new System.Drawing.Point(153, 229);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(144, 25);
+            this.labelPrice.Size = new System.Drawing.Size(144, 23);
             this.labelPrice.TabIndex = 23;
             this.labelPrice.Text = "500 грн";
             // 
@@ -185,9 +185,9 @@
             this.labelSeason.AutoSize = true;
             this.labelSeason.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelSeason.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSeason.Location = new System.Drawing.Point(153, 290);
+            this.labelSeason.Location = new System.Drawing.Point(153, 206);
             this.labelSeason.Name = "labelSeason";
-            this.labelSeason.Size = new System.Drawing.Size(144, 25);
+            this.labelSeason.Size = new System.Drawing.Size(144, 23);
             this.labelSeason.TabIndex = 24;
             this.labelSeason.Text = "Зима/лето";
             // 
@@ -196,9 +196,9 @@
             this.labelCountry.AutoSize = true;
             this.labelCountry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCountry.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCountry.Location = new System.Drawing.Point(153, 265);
+            this.labelCountry.Location = new System.Drawing.Point(153, 183);
             this.labelCountry.Name = "labelCountry";
-            this.labelCountry.Size = new System.Drawing.Size(144, 25);
+            this.labelCountry.Size = new System.Drawing.Size(144, 23);
             this.labelCountry.TabIndex = 27;
             this.labelCountry.Text = "Україна";
             // 
@@ -208,9 +208,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.labelName, 2);
             this.labelName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelName.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelName.Location = new System.Drawing.Point(3, 200);
+            this.labelName.Location = new System.Drawing.Point(3, 125);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(294, 40);
+            this.labelName.Size = new System.Drawing.Size(294, 35);
             this.labelName.TabIndex = 25;
             this.labelName.Text = "Назва";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,9 +220,9 @@
             this.labelMyCountry.AutoSize = true;
             this.labelMyCountry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelMyCountry.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMyCountry.Location = new System.Drawing.Point(3, 265);
+            this.labelMyCountry.Location = new System.Drawing.Point(3, 183);
             this.labelMyCountry.Name = "labelMyCountry";
-            this.labelMyCountry.Size = new System.Drawing.Size(144, 25);
+            this.labelMyCountry.Size = new System.Drawing.Size(144, 23);
             this.labelMyCountry.TabIndex = 26;
             this.labelMyCountry.Text = "Країна";
             // 
@@ -231,9 +231,9 @@
             this.labelCategory.AutoSize = true;
             this.labelCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCategory.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCategory.Location = new System.Drawing.Point(153, 240);
+            this.labelCategory.Location = new System.Drawing.Point(153, 160);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(144, 25);
+            this.labelCategory.Size = new System.Drawing.Size(144, 23);
             this.labelCategory.TabIndex = 22;
             this.labelCategory.Text = "Man/woman";
             // 
@@ -247,9 +247,9 @@
             this.buttonChek.ForeColor = System.Drawing.Color.Black;
             this.buttonChek.Image = global::G_Shop.Application.Properties.Resources.Toolbox_16;
             this.buttonChek.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChek.Location = new System.Drawing.Point(3, 522);
+            this.buttonChek.Location = new System.Drawing.Point(3, 538);
             this.buttonChek.Name = "buttonChek";
-            this.buttonChek.Size = new System.Drawing.Size(294, 60);
+            this.buttonChek.Size = new System.Drawing.Size(294, 44);
             this.buttonChek.TabIndex = 29;
             this.buttonChek.Text = "Добавить в заказ";
             this.buttonChek.UseVisualStyleBackColor = true;
@@ -258,7 +258,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Location = new System.Drawing.Point(153, 497);
+            this.numericUpDown1.Location = new System.Drawing.Point(153, 515);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -277,7 +277,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.sizesControl, 2);
             this.sizesControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sizesControl.Location = new System.Drawing.Point(3, 422);
+            this.sizesControl.Location = new System.Drawing.Point(3, 447);
             this.sizesControl.Name = "sizesControl";
             this.sizesControl.Size = new System.Drawing.Size(294, 39);
             this.sizesControl.TabIndex = 31;

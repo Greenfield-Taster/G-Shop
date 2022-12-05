@@ -23,6 +23,11 @@ internal class OperationsRepository : IOperationsRepository
         throw new NotImplementedException();
     }
 
+    public void DisplayAllSales()
+    {
+        throw new NotImplementedException();
+    }
+
     public int GetNextCheckNumber()
     {
         int maxCheckId = databaseSales.Max(sale => sale.ChekId);
