@@ -1,4 +1,5 @@
-﻿namespace G_Shop.Application;
+﻿//Works version
+namespace G_Shop.Application;
 
 public partial class FormMain : Form
 {
